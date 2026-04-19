@@ -1,20 +1,40 @@
 import socket
-import time
 import random
+import time
 
-HOST = '127.0.0.1'
-PORT = 65432
+host = "127.0.0.1"
+port = 5000
 
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((HOST, PORT))
+server = socket.socket()
+server.bind((host, port))
+server.listen(1)
+
+print("🚗 Vehicle A waiting for connection...")
+
+conn, addr = server.accept()
+print(f"Connected to {addr}")
 
 while True:
-    speed = random.randint(20, 100)
-    distance = random.randint(10, 100)
+    # Simulated data
+    distance = random.randint(5, 100)
+    speed = random.randint(20, 80)
 
-    data = str(speed) + "," + str(distance)
-    client.send(data.encode())
+    # Collision logic
+    if distance < 20:
+        alert = "DANGER 🚨"
+    elif distance < 50:
+        alert = "WARNING ⚠️"
+    else:
+        alert = "SAFE ✅"
 
-    print("Sent Speed:", speed, "Distance:", distance)
+    message = f"A | Dist:{distance} | Speed:{speed} | {alert}"
+    conn.send(message.encode())
+
+    # Receive from B
+    data = conn.recv(1024).decode()
+    print(f"\n📡 From Vehicle B: {data}")
+
+    print(f"📤 Sent: {message}")
+    print("----------------------")
 
     time.sleep(2)
