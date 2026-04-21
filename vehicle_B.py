@@ -1,15 +1,12 @@
 import socket
-<<<<<<< HEAD
 import json
-=======
->>>>>>> 1a5c7d875abff1de9f30a03afaf173295784dd35
 import random
 import time
 
-host = "127.0.0.1"
-port = 5000
+# Configuration
+HOST = "127.0.0.1"
+PORT = 5000
 
-<<<<<<< HEAD
 # Smart Collision Function
 def smart_collision(my_data, other_data):
     speed_diff = abs(my_data["speed"] - other_data["speed"])
@@ -21,6 +18,7 @@ def smart_collision(my_data, other_data):
     else:
         return "✅ SAFE"
 
+# Socket setup (Client)
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 
@@ -32,23 +30,23 @@ try:
     while True:
         count += 1
 
-        # Receive first
+        # Receive data from Vehicle A
         received = json.loads(client.recv(1024).decode())
 
-        # Generate data
+        # Generate Vehicle B data
         data_B = {
             "vehicle": "B",
             "distance": random.randint(5, 100),
             "speed": random.randint(20, 80)
         }
 
-        # Send response
+        # Send data to Vehicle A
         client.send(json.dumps(data_B).encode())
 
-        # Smart collision
+        # Collision logic
         risk = smart_collision(data_B, received)
 
-        # Output
+        # Display output
         print(f"""
 🚗 VEHICLE B REPORT
 ---------------------------
@@ -58,10 +56,11 @@ Risk Level    : {risk}
 ---------------------------
 """)
 
-        # Logging
+        # Save log
         with open("log.txt", "a", encoding="utf-8") as f:
             f.write(f"B: {data_B} | A: {received} | {risk}\n")
 
+        # Stop after 10 iterations (optional)
         if count == 10:
             print("🛑 Vehicle B stopping...")
             break
@@ -73,34 +72,3 @@ except KeyboardInterrupt:
 
 finally:
     client.close()
-=======
-client = socket.socket()
-client.connect((host, port))
-
-print("🚗 Vehicle B connected!")
-
-while True:
-    # Receive from A
-    data = client.recv(1024).decode()
-    print(f"\n📡 From Vehicle A: {data}")
-
-    # Simulated data
-    distance = random.randint(5, 100)
-    speed = random.randint(20, 80)
-
-    # Collision logic
-    if distance < 20:
-        alert = "DANGER 🚨"
-    elif distance < 50:
-        alert = "WARNING ⚠️"
-    else:
-        alert = "SAFE ✅"
-
-    message = f"B | Dist:{distance} | Speed:{speed} | {alert}"
-    client.send(message.encode())
-
-    print(f"📤 Sent: {message}")
-    print("----------------------")
-
-    time.sleep(2)
->>>>>>> 1a5c7d875abff1de9f30a03afaf173295784dd35
