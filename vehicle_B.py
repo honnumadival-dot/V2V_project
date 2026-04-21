@@ -1,32 +1,71 @@
 import socket
+import json
+import random
+import time
 
 HOST = '127.0.0.1'
 PORT = 65432
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind((HOST, PORT))
-server.listen()
+# Smart Collision Function
+def smart_collision(my_data, other_data):
+    speed_diff = abs(my_data["speed"] - other_data["speed"])
 
-print("Vehicle B Waiting for data...")
-
-conn, addr = server.accept()
-
-while True:
-    data = conn.recv(1024).decode()
-    if not data:
-        break
-
-    speed, distance = data.split(",")
-
-    speed = int(speed)
-    distance = int(distance)
-
-    print("Received Speed:", speed)
-    print("Received Distance:", distance)
-
-    if distance < 20:
-        print("🚨 HIGH ALERT")
-    elif distance < 40:
-        print("⚠️ MEDIUM ALERT")
+    if my_data["distance"] < 20 and speed_diff > 30:
+        return "🚨 CRITICAL COLLISION"
+    elif my_data["distance"] < 50 or other_data["distance"] < 50:
+        return "⚠️ WARNING"
     else:
-        print("✅ SAFE")
+        return "✅ SAFE"
+
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client.connect((HOST, PORT))
+
+print("🚗 Vehicle B connected!")
+
+count = 0
+
+try:
+    while True:
+        count += 1
+
+        # Receive first
+        received = json.loads(client.recv(1024).decode())
+
+        # Generate data
+        data_B = {
+            "vehicle": "B",
+            "distance": random.randint(5, 100),
+            "speed": random.randint(20, 80)
+        }
+
+        # Send response
+        client.send(json.dumps(data_B).encode())
+
+        # Smart collision
+        risk = smart_collision(data_B, received)
+
+        # Output
+        print(f"""
+🚗 VEHICLE B REPORT
+---------------------------
+My Data       : {data_B}
+Other Vehicle : {received}
+Risk Level    : {risk}
+---------------------------
+""")
+
+        # Logging
+        with open("log.txt", "a", encoding="utf-8") as f:
+            f.write(f"B: {data_B} | A: {received} | {risk}\n")
+
+        if count == 10:
+            print("🛑 Vehicle B stopping...")
+            break
+
+        time.sleep(2)
+
+except KeyboardInterrupt:
+    print("Stopped manually")
+
+finally:
+    client.close()
