@@ -1,12 +1,13 @@
 import socket
 import json
 import random
-import time
 import tkinter as tk
 
-HOST = '127.0.0.1'
-PORT = 65432
+# Configuration
+HOST = "127.0.0.1"
+PORT = 5000
 
+# Smart collision logic
 def smart_collision(my_data, other_data):
     speed_diff = abs(my_data["speed"] - other_data["speed"])
 
@@ -39,21 +40,27 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
 server.listen(1)
 
-print("Waiting for connection...")
+print("🚗 Vehicle A waiting for connection...")
 conn, addr = server.accept()
+print(f"Connected to {addr}")
 
+# Update function
 def update():
     try:
-        # Generate data
+        # Generate Vehicle A data
         data_A = {
             "vehicle": "A",
             "distance": random.randint(5, 100),
             "speed": random.randint(20, 80)
         }
 
+        # Send data to Vehicle B
         conn.send(json.dumps(data_A).encode())
+
+        # Receive data from Vehicle B
         received = json.loads(conn.recv(1024).decode())
 
+        # Risk calculation
         risk = smart_collision(data_A, received)
 
         # Update GUI
@@ -61,7 +68,7 @@ def update():
         other_label.config(text=f"Other: {received}")
         risk_label.config(text=f"Risk: {risk}")
 
-        # Color logic
+        # Color indication
         if risk == "CRITICAL":
             risk_label.config(fg="red")
         elif risk == "WARNING":
@@ -69,10 +76,11 @@ def update():
         else:
             risk_label.config(fg="green")
 
-    except:
-        pass
+    except Exception as e:
+        print("Error:", e)
 
     root.after(2000, update)
 
+# Start loop
 update()
 root.mainloop()

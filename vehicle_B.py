@@ -1,11 +1,15 @@
 import socket
+<<<<<<< HEAD
 import json
+=======
+>>>>>>> 1a5c7d875abff1de9f30a03afaf173295784dd35
 import random
 import time
 
-HOST = '127.0.0.1'
-PORT = 65432
+host = "127.0.0.1"
+port = 5000
 
+<<<<<<< HEAD
 # Smart Collision Function
 def smart_collision(my_data, other_data):
     speed_diff = abs(my_data["speed"] - other_data["speed"])
@@ -69,3 +73,34 @@ except KeyboardInterrupt:
 
 finally:
     client.close()
+=======
+client = socket.socket()
+client.connect((host, port))
+
+print("🚗 Vehicle B connected!")
+
+while True:
+    # Receive from A
+    data = client.recv(1024).decode()
+    print(f"\n📡 From Vehicle A: {data}")
+
+    # Simulated data
+    distance = random.randint(5, 100)
+    speed = random.randint(20, 80)
+
+    # Collision logic
+    if distance < 20:
+        alert = "DANGER 🚨"
+    elif distance < 50:
+        alert = "WARNING ⚠️"
+    else:
+        alert = "SAFE ✅"
+
+    message = f"B | Dist:{distance} | Speed:{speed} | {alert}"
+    client.send(message.encode())
+
+    print(f"📤 Sent: {message}")
+    print("----------------------")
+
+    time.sleep(2)
+>>>>>>> 1a5c7d875abff1de9f30a03afaf173295784dd35
