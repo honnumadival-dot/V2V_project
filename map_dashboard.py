@@ -13,16 +13,13 @@ vehicles = {}
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect((HOST, PORT))
 
-print("📡 Map dashboard connected")
-
 # ---------------- COLLISION ----------------
 def smart_collision(v1, v2):
     if v2["distance"] < 20:
         return "CRITICAL"
     elif v2["distance"] < 50:
         return "WARNING"
-    else:
-        return "SAFE"
+    return "SAFE"
 
 # ---------------- RECEIVE ----------------
 def receive():
@@ -30,11 +27,14 @@ def receive():
         try:
             data = json.loads(client.recv(1024).decode())
 
-            # Add position if new
             if data["vehicle"] not in vehicles:
                 vehicles[data["vehicle"]] = {
-                    "x": random.randint(50, 550),
-                    "y": random.randint(50, 350),
+                    "x": random.choice([100, 200, 400, 500]),
+                    "y": random.choice([100, 200, 300]),
+                    "dir": random.choice(["H", "V"]),
+                    "lane": random.choice([0, 1]),
+                    "speed": random.randint(5, 15),
+                    "turn": random.choice(["STRAIGHT", "LEFT", "RIGHT"]),
                     "data": data
                 }
             else:
@@ -47,70 +47,100 @@ threading.Thread(target=receive, daemon=True).start()
 
 # ---------------- GUI ----------------
 root = tk.Tk()
-root.title("🚗 V2V Map Simulation")
-root.geometry("700x500")
+root.title("🚗 Advanced Traffic Simulation")
+root.geometry("800x500")
 
-canvas = tk.Canvas(root, width=650, height=400, bg="lightgray")
+canvas = tk.Canvas(root, width=750, height=450, bg="green")
 canvas.pack()
 
-alert_label = tk.Label(root, text="", font=("Arial", 14, "bold"))
-alert_label.pack()
+signal_state = "GREEN"
+timer = 0
+
+# ---------------- DRAW MAP ----------------
+def draw_map():
+    # Roads
+    canvas.create_rectangle(0, 180, 750, 260, fill="gray")  # horizontal
+    canvas.create_rectangle(320, 0, 420, 450, fill="gray")  # vertical
+
+    # Lane lines
+    for i in range(0, 750, 40):
+        canvas.create_line(i, 220, i+20, 220, fill="white", width=2)
+    for i in range(0, 450, 40):
+        canvas.create_line(370, i, 370, i+20, fill="white", width=2)
+
+# ---------------- SIGNAL ----------------
+def draw_signal():
+    color = "green" if signal_state == "GREEN" else "red"
+    canvas.create_oval(360, 200, 380, 220, fill=color)
 
 # ---------------- UPDATE ----------------
 def update():
+    global signal_state, timer
+
     canvas.delete("all")
+    draw_map()
+    draw_signal()
 
-    critical = False
+    timer += 1
+    if timer % 6 == 0:
+        signal_state = "RED" if signal_state == "GREEN" else "GREEN"
 
-    for vid, info in vehicles.items():
-        x = info["x"]
-        y = info["y"]
+    for vid, v in vehicles.items():
+        x, y = v["x"], v["y"]
+        speed = v["speed"]
+        direction = v["dir"]
+        turn = v["turn"]
 
-        # Random movement
-        x += random.randint(-10, 10)
-        y += random.randint(-10, 10)
+        # ---------------- MOVEMENT ----------------
+        if direction == "H":
+            if signal_state == "RED" and 300 < x < 380:
+                pass
+            else:
+                x += speed
 
-        # Keep inside bounds
-        x = max(20, min(630, x))
-        y = max(20, min(380, y))
+                # TURN LOGIC
+                if 320 < x < 400:
+                    if turn == "LEFT":
+                        v["dir"] = "V"
+                    elif turn == "RIGHT":
+                        v["dir"] = "V"
 
-        vehicles[vid]["x"] = x
-        vehicles[vid]["y"] = y
+        else:  # Vertical
+            if signal_state == "RED" and 180 < y < 260:
+                pass
+            else:
+                y += speed
 
-        data = info["data"]
+                if 180 < y < 260:
+                    if turn == "LEFT":
+                        v["dir"] = "H"
+                    elif turn == "RIGHT":
+                        v["dir"] = "H"
 
-        # Calculate risk
+        # LOOP
+        if x > 750: x = 0
+        if y > 450: y = 0
+
+        v["x"], v["y"] = x, y
+
+        # ---------------- COLLISION ----------------
         risk = "SAFE"
-        for other_id, other_info in vehicles.items():
-            if vid != other_id:
-                r = smart_collision(data, other_info["data"])
+        for oid, other in vehicles.items():
+            if vid != oid:
+                r = smart_collision(v["data"], other["data"])
                 if r == "CRITICAL":
                     risk = "CRITICAL"
-                    critical = True
                     break
                 elif r == "WARNING":
                     risk = "WARNING"
 
-        # Color based on risk
-        color = "green"
-        if risk == "CRITICAL":
-            color = "red"
-        elif risk == "WARNING":
-            color = "orange"
+        color = {"SAFE": "green", "WARNING": "orange", "CRITICAL": "red"}[risk]
 
-        # Draw vehicle
-        canvas.create_oval(x-10, y-10, x+10, y+10, fill=color)
+        # ---------------- DRAW CAR ----------------
+        canvas.create_rectangle(x-12, y-6, x+12, y+6, fill=color)
+        canvas.create_text(x, y-12, text=f"{vid}", fill="white")
 
-        # Label
-        canvas.create_text(x, y-15, text=vid)
-
-    # Alert
-    if critical:
-        alert_label.config(text="🚨 COLLISION ALERT!", fg="red")
-    else:
-        alert_label.config(text="All vehicles safe", fg="green")
-
-    root.after(1000, update)
+    root.after(800, update)
 
 update()
 root.mainloop()
