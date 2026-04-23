@@ -3,6 +3,7 @@ import json
 import tkinter as tk
 import threading
 import random
+from PIL import Image, ImageTk
 
 HOST = '127.0.0.1'
 PORT = 5000
@@ -32,7 +33,6 @@ def receive():
                     "x": random.choice([100, 200, 400, 500]),
                     "y": random.choice([100, 200, 300]),
                     "dir": random.choice(["H", "V"]),
-                    "lane": random.choice([0, 1]),
                     "speed": random.randint(5, 15),
                     "turn": random.choice(["STRAIGHT", "LEFT", "RIGHT"]),
                     "data": data
@@ -53,18 +53,34 @@ root.geometry("800x500")
 canvas = tk.Canvas(root, width=750, height=450, bg="green")
 canvas.pack()
 
+# ---------------- LOAD IMAGE SAFELY ----------------
+try:
+    base_img = Image.open("Assets/car.png").resize((40, 20))
+except Exception as e:
+    print("⚠️ Image error:", e)
+    base_img = Image.new("RGB", (40, 20), "blue")  # fallback
+
+# Rotations for directions
+car_images = {
+    "H": ImageTk.PhotoImage(base_img),
+    "V": ImageTk.PhotoImage(base_img.rotate(90, expand=True))
+}
+
+# Keep references (IMPORTANT)
+image_refs = []
+
 signal_state = "GREEN"
 timer = 0
 
 # ---------------- DRAW MAP ----------------
 def draw_map():
-    # Roads
-    canvas.create_rectangle(0, 180, 750, 260, fill="gray")  # horizontal
-    canvas.create_rectangle(320, 0, 420, 450, fill="gray")  # vertical
+    canvas.create_rectangle(0, 180, 750, 260, fill="gray")
+    canvas.create_rectangle(320, 0, 420, 450, fill="gray")
 
-    # Lane lines
+    # lane lines
     for i in range(0, 750, 40):
         canvas.create_line(i, 220, i+20, 220, fill="white", width=2)
+
     for i in range(0, 450, 40):
         canvas.create_line(370, i, 370, i+20, fill="white", width=2)
 
@@ -75,9 +91,11 @@ def draw_signal():
 
 # ---------------- UPDATE ----------------
 def update():
-    global signal_state, timer
+    global signal_state, timer, image_refs
 
     canvas.delete("all")
+    image_refs = []  # reset references
+
     draw_map()
     draw_signal()
 
@@ -93,31 +111,18 @@ def update():
 
         # ---------------- MOVEMENT ----------------
         if direction == "H":
-            if signal_state == "RED" and 300 < x < 380:
-                pass
-            else:
+            if not (signal_state == "RED" and 300 < x < 380):
                 x += speed
-
-                # TURN LOGIC
-                if 320 < x < 400:
-                    if turn == "LEFT":
-                        v["dir"] = "V"
-                    elif turn == "RIGHT":
-                        v["dir"] = "V"
+                if 320 < x < 400 and turn != "STRAIGHT":
+                    v["dir"] = "V"
 
         else:  # Vertical
-            if signal_state == "RED" and 180 < y < 260:
-                pass
-            else:
+            if not (signal_state == "RED" and 180 < y < 260):
                 y += speed
+                if 180 < y < 260 and turn != "STRAIGHT":
+                    v["dir"] = "H"
 
-                if 180 < y < 260:
-                    if turn == "LEFT":
-                        v["dir"] = "H"
-                    elif turn == "RIGHT":
-                        v["dir"] = "H"
-
-        # LOOP
+        # LOOP BACK
         if x > 750: x = 0
         if y > 450: y = 0
 
@@ -134,13 +139,15 @@ def update():
                 elif r == "WARNING":
                     risk = "WARNING"
 
-        color = {"SAFE": "green", "WARNING": "orange", "CRITICAL": "red"}[risk]
-
         # ---------------- DRAW CAR ----------------
-        canvas.create_rectangle(x-12, y-6, x+12, y+6, fill=color)
-        canvas.create_text(x, y-12, text=f"{vid}", fill="white")
+        img = car_images.get(v["dir"], car_images["H"])
+        image_refs.append(img)  # prevent garbage collection
+
+        canvas.create_image(x, y, image=img)
+        canvas.create_text(x, y-12, text=vid, fill="white")
 
     root.after(800, update)
 
+# ---------------- RUN ----------------
 update()
 root.mainloop()
