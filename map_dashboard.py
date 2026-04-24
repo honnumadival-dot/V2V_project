@@ -141,9 +141,10 @@ def update():
 
         # ---------------- DRAW CAR ----------------
         img = car_images.get(v["dir"], car_images["H"])
+        Image.open("assets/car.png").resize((40, 20))
         image_refs.append(img)  # prevent garbage collection
 
-        canvas.create_image(x, y, image=img)
+        canvas.create_rectangle(x-10, y-5, x+10, y+5, fill="blue")
         canvas.create_text(x, y-12, text=vid, fill="white")
 
     root.after(800, update)
