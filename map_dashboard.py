@@ -47,26 +47,26 @@ threading.Thread(target=receive, daemon=True).start()
 
 # ---------------- GUI ----------------
 root = tk.Tk()
-root.title("🚗 Advanced Traffic Simulation")
+root.title("🚗 Traffic Simulation (Image Cars)")
 root.geometry("800x500")
 
 canvas = tk.Canvas(root, width=750, height=450, bg="green")
 canvas.pack()
 
-# ---------------- LOAD IMAGE SAFELY ----------------
+# ---------------- LOAD IMAGE ----------------
 try:
-    base_img = Image.open("Assets/car.png").resize((40, 20))
-except Exception as e:
-    print("⚠️ Image error:", e)
-    base_img = Image.new("RGB", (40, 20), "blue")  # fallback
+    base_img = Image.open("assets/car.png").resize((40, 20))
+except:
+    print("⚠️ Image not found, using fallback")
+    base_img = Image.new("RGB", (40, 20), "blue")
 
-# Rotations for directions
+# Rotate for directions
 car_images = {
     "H": ImageTk.PhotoImage(base_img),
     "V": ImageTk.PhotoImage(base_img.rotate(90, expand=True))
 }
 
-# Keep references (IMPORTANT)
+# IMPORTANT: keep references
 image_refs = []
 
 signal_state = "GREEN"
@@ -77,7 +77,6 @@ def draw_map():
     canvas.create_rectangle(0, 180, 750, 260, fill="gray")
     canvas.create_rectangle(320, 0, 420, 450, fill="gray")
 
-    # lane lines
     for i in range(0, 750, 40):
         canvas.create_line(i, 220, i+20, 220, fill="white", width=2)
 
@@ -94,7 +93,7 @@ def update():
     global signal_state, timer, image_refs
 
     canvas.delete("all")
-    image_refs = []  # reset references
+    image_refs = []
 
     draw_map()
     draw_signal()
@@ -116,13 +115,13 @@ def update():
                 if 320 < x < 400 and turn != "STRAIGHT":
                     v["dir"] = "V"
 
-        else:  # Vertical
+        else:
             if not (signal_state == "RED" and 180 < y < 260):
                 y += speed
                 if 180 < y < 260 and turn != "STRAIGHT":
                     v["dir"] = "H"
 
-        # LOOP BACK
+        # LOOP
         if x > 750: x = 0
         if y > 450: y = 0
 
@@ -139,13 +138,12 @@ def update():
                 elif r == "WARNING":
                     risk = "WARNING"
 
-        # ---------------- DRAW CAR ----------------
+        # ---------------- DRAW IMAGE ----------------
         img = car_images.get(v["dir"], car_images["H"])
-        Image.open("assets/car.png").resize((40, 20))
-        image_refs.append(img)  # prevent garbage collection
+        image_refs.append(img)
 
-        canvas.create_rectangle(x-10, y-5, x+10, y+5, fill="blue")
-        canvas.create_text(x, y-12, text=vid, fill="white")
+        canvas.create_image(x, y, image=img)
+        canvas.create_text(x, y-15, text=vid, fill="white")
 
     root.after(800, update)
 
