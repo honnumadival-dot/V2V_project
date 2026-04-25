@@ -3,6 +3,7 @@ import json
 import tkinter as tk
 import threading
 import random
+import os
 from PIL import Image, ImageTk
 
 HOST = '127.0.0.1'
@@ -12,7 +13,12 @@ vehicles = {}
 
 # ---------------- SOCKET ----------------
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((HOST, PORT))
+
+try:
+    client.connect((HOST, PORT))
+    print("Connected to server")
+except:
+    print("Server not running, using simulation mode")
 
 # ---------------- COLLISION ----------------
 def smart_collision(v1, v2):
@@ -47,36 +53,49 @@ threading.Thread(target=receive, daemon=True).start()
 
 # ---------------- GUI ----------------
 root = tk.Tk()
-root.title("🚗 Traffic Simulation (Image Cars)")
+root.title("🚗 PRO Traffic Simulation")
 root.geometry("800x500")
 
 canvas = tk.Canvas(root, width=750, height=450, bg="green")
 canvas.pack()
 
 # ---------------- LOAD IMAGE ----------------
-try:
-    base_img = Image.open("assets/car.png").resize((40, 20))
-except:
-    print("⚠️ Image not found, using fallback")
-    base_img = Image.new("RGB", (40, 20), "blue")
-
-# Rotate for directions
-car_images = {
-    "H": ImageTk.PhotoImage(base_img),
-    "V": ImageTk.PhotoImage(base_img.rotate(90, expand=True))
-}
-
-# IMPORTANT: keep references
 image_refs = []
 
+try:
+    base_path = os.path.dirname(__file__)
+    image_path = os.path.join(base_path, "assets", "car.png")
+
+    print("Loading image:", image_path)
+
+    base_img = Image.open(image_path).convert("RGBA").resize((40, 20))
+
+    car_images = {
+        "H": ImageTk.PhotoImage(base_img),
+        "V": ImageTk.PhotoImage(base_img.rotate(90, expand=True))
+    }
+
+except Exception as e:
+    print("Image error:", e)
+
+    base_img = Image.new("RGB", (40, 20), "blue")
+
+    car_images = {
+        "H": ImageTk.PhotoImage(base_img),
+        "V": ImageTk.PhotoImage(base_img)
+    }
+
+# ---------------- TRAFFIC SIGNAL ----------------
 signal_state = "GREEN"
 timer = 0
 
 # ---------------- DRAW MAP ----------------
 def draw_map():
+    # Roads
     canvas.create_rectangle(0, 180, 750, 260, fill="gray")
     canvas.create_rectangle(320, 0, 420, 450, fill="gray")
 
+    # Lane lines
     for i in range(0, 750, 40):
         canvas.create_line(i, 220, i+20, 220, fill="white", width=2)
 
@@ -102,50 +121,45 @@ def update():
     if timer % 6 == 0:
         signal_state = "RED" if signal_state == "GREEN" else "GREEN"
 
+    # If no vehicles from server → simulate locally
+    if not vehicles:
+        for i in range(3):
+            vehicles[f"V{i}"] = {
+                "x": random.randint(0, 700),
+                "y": random.randint(0, 400),
+                "dir": random.choice(["H", "V"]),
+                "speed": random.randint(5, 10),
+                "turn": "STRAIGHT",
+                "data": {"distance": random.randint(10, 100)}
+            }
+
     for vid, v in vehicles.items():
         x, y = v["x"], v["y"]
         speed = v["speed"]
         direction = v["dir"]
-        turn = v["turn"]
 
-        # ---------------- MOVEMENT ----------------
+        # Movement logic
         if direction == "H":
             if not (signal_state == "RED" and 300 < x < 380):
                 x += speed
-                if 320 < x < 400 and turn != "STRAIGHT":
-                    v["dir"] = "V"
-
         else:
             if not (signal_state == "RED" and 180 < y < 260):
                 y += speed
-                if 180 < y < 260 and turn != "STRAIGHT":
-                    v["dir"] = "H"
 
-        # LOOP
+        # Loop screen
         if x > 750: x = 0
         if y > 450: y = 0
 
         v["x"], v["y"] = x, y
 
-        # ---------------- COLLISION ----------------
-        risk = "SAFE"
-        for oid, other in vehicles.items():
-            if vid != oid:
-                r = smart_collision(v["data"], other["data"])
-                if r == "CRITICAL":
-                    risk = "CRITICAL"
-                    break
-                elif r == "WARNING":
-                    risk = "WARNING"
-
-        # ---------------- DRAW IMAGE ----------------
-        img = car_images.get(v["dir"], car_images["H"])
+        # Draw car
+        img = car_images.get(direction, car_images["H"])
         image_refs.append(img)
 
         canvas.create_image(x, y, image=img)
         canvas.create_text(x, y-15, text=vid, fill="white")
 
-    root.after(800, update)
+    root.after(500, update)
 
 # ---------------- RUN ----------------
 update()
