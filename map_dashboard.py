@@ -4,162 +4,301 @@ import tkinter as tk
 import threading
 import random
 import os
+import time
+import requests
+import joblib
+from io import BytesIO
+from collections import deque
 from PIL import Image, ImageTk
+
+# ---------------- OPTIONAL GRAPH ----------------
+try:
+    import matplotlib
+    matplotlib.use("TkAgg")
+    from matplotlib.figure import Figure
+    from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+    HAS_PLOT = True
+except:
+    HAS_PLOT = False
 
 HOST = '127.0.0.1'
 PORT = 5000
 
 vehicles = {}
 
+# ---------------- ML MODEL ----------------
+try:
+    model = joblib.load("model.pkl")
+except:
+    model = None
+
+# ---------------- LANES ----------------
+horizontal_lanes = [230, 270]
+vertical_lanes = [400, 440]
+
+# ---------------- MULTI INTERSECTION ----------------
+intersections = [
+    (350,200,450,300),
+    (550,350,650,450)
+]
+
+# ---------------- MAP ----------------
+def load_map():
+    try:
+        url = "https://tile.openstreetmap.org/15/18200/11800.png"
+        r = requests.get(url, timeout=5)
+        img = Image.open(BytesIO(r.content))
+        return ImageTk.PhotoImage(img.resize((850,550)))
+    except:
+        return None
+
 # ---------------- SOCKET ----------------
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 try:
     client.connect((HOST, PORT))
-    print("Connected to server")
 except:
-    print("Server not running, using simulation mode")
+    print("Simulation mode")
 
-# ---------------- COLLISION ----------------
-def smart_collision(v1, v2):
-    if v2["distance"] < 20:
-        return "CRITICAL"
-    elif v2["distance"] < 50:
-        return "WARNING"
-    return "SAFE"
-
-# ---------------- RECEIVE ----------------
 def receive():
     while True:
         try:
             data = json.loads(client.recv(1024).decode())
+            vid = data.get("vehicle", f"V{random.randint(100,999)}")
 
-            if data["vehicle"] not in vehicles:
-                vehicles[data["vehicle"]] = {
-                    "x": random.choice([100, 200, 400, 500]),
-                    "y": random.choice([100, 200, 300]),
-                    "dir": random.choice(["H", "V"]),
-                    "speed": random.randint(5, 15),
-                    "turn": random.choice(["STRAIGHT", "LEFT", "RIGHT"]),
-                    "data": data
+            if vid not in vehicles:
+                direction = random.choice(["RIGHT","LEFT","UP","DOWN"])
+
+                if direction in ["RIGHT","LEFT"]:
+                    x = random.randint(0,800)
+                    y = random.choice(horizontal_lanes)
+                else:
+                    x = random.choice(vertical_lanes)
+                    y = random.randint(0,450)
+
+                # 🧠 Behavior
+                behavior = random.choice(["AGGRESSIVE","NORMAL","SAFE"])
+                if behavior == "AGGRESSIVE":
+                    base_speed = random.uniform(4,6)
+                elif behavior == "SAFE":
+                    base_speed = random.uniform(1,2)
+                else:
+                    base_speed = random.uniform(2,4)
+
+                vehicles[vid] = {
+                    "x": x,
+                    "y": y,
+                    "dir": direction,
+                    "speed": base_speed,
+                    "base_speed": base_speed,
+                    "behavior": behavior,
+                    "wait": 0,
+                    "crashed": False,
+                    "type": data.get("type","normal")
                 }
-            else:
-                vehicles[data["vehicle"]]["data"] = data
 
         except:
             break
 
 threading.Thread(target=receive, daemon=True).start()
 
-# ---------------- GUI ----------------
-root = tk.Tk()
-root.title("🚗 PRO Traffic Simulation")
-root.geometry("800x500")
+# ---------------- COLLISION ----------------
+def predict_collision(v1, v2):
+    dist = ((v1["x"]-v2["x"])**2 + (v1["y"]-v2["y"])**2)**0.5
 
-canvas = tk.Canvas(root, width=750, height=450, bg="green")
-canvas.pack()
+    if dist < 10:
+        v1["crashed"] = True
+        v2["crashed"] = True
+        return "CRASH"
 
-# ---------------- LOAD IMAGE ----------------
-image_refs = []
+    if model:
+        speed_diff = abs(v1["speed"]-v2["speed"])
+        pred = model.predict([[dist, speed_diff]])[0]
+        return ["SAFE","WARNING","CRITICAL"][pred]
+    else:
+        if dist < 40: return "CRITICAL"
+        elif dist < 80: return "WARNING"
+        return "SAFE"
 
-try:
-    base_path = os.path.dirname(__file__)
-    image_path = os.path.join(base_path, "assets", "car.png")
-
-    print("Loading image:", image_path)
-
-    base_img = Image.open(image_path).convert("RGBA").resize((40, 20))
-
-    car_images = {
-        "H": ImageTk.PhotoImage(base_img),
-        "V": ImageTk.PhotoImage(base_img.rotate(90, expand=True))
-    }
-
-except Exception as e:
-    print("Image error:", e)
-
-    base_img = Image.new("RGB", (40, 20), "blue")
-
-    car_images = {
-        "H": ImageTk.PhotoImage(base_img),
-        "V": ImageTk.PhotoImage(base_img)
-    }
-
-# ---------------- TRAFFIC SIGNAL ----------------
-signal_state = "GREEN"
-timer = 0
-
-# ---------------- DRAW MAP ----------------
-def draw_map():
-    # Roads
-    canvas.create_rectangle(0, 180, 750, 260, fill="gray")
-    canvas.create_rectangle(320, 0, 420, 450, fill="gray")
-
-    # Lane lines
-    for i in range(0, 750, 40):
-        canvas.create_line(i, 220, i+20, 220, fill="white", width=2)
-
-    for i in range(0, 450, 40):
-        canvas.create_line(370, i, 370, i+20, fill="white", width=2)
+# ---------------- LOG ----------------
+def log_event(msg):
+    with open("events.log","a") as f:
+        f.write(f"{time.strftime('%H:%M:%S')} {msg}\n")
 
 # ---------------- SIGNAL ----------------
-def draw_signal():
-    color = "green" if signal_state == "GREEN" else "red"
-    canvas.create_oval(360, 200, 380, 220, fill=color)
+signal_state = "GREEN"
+
+def has_emergency():
+    return any(v["type"]=="emergency" for v in vehicles.values())
+
+def smart_signal():
+    global signal_state
+
+    if has_emergency():
+        signal_state = "GREEN"
+        return
+
+    h_wait = sum(v["wait"] for v in vehicles.values() if v["dir"] in ["LEFT","RIGHT"])
+    v_wait = sum(v["wait"] for v in vehicles.values() if v["dir"] in ["UP","DOWN"])
+
+    signal_state = "GREEN" if h_wait >= v_wait else "RED"
+
+# ---------------- GUI ----------------
+root = tk.Tk()
+root.title("🚗 FINAL ULTRA PRO SYSTEM")
+root.geometry("1200x620")
+
+left = tk.Frame(root)
+left.pack(side="left")
+
+canvas = tk.Canvas(left, width=850, height=550)
+canvas.pack()
+
+right = tk.Frame(root, bg="#111")
+right.pack(side="right", fill="y")
+
+stats = tk.Label(right, fg="white", bg="#111")
+stats.pack()
+
+# ---------------- GRAPH ----------------
+if HAS_PLOT:
+    fig = Figure(figsize=(3,2))
+    ax = fig.add_subplot(111)
+    xdata = deque(maxlen=60)
+    ydata = deque(maxlen=60)
+    plot = FigureCanvasTkAgg(fig, master=right)
+    plot.get_tk_widget().pack()
+
+# ---------------- MAP ----------------
+map_img = load_map()
 
 # ---------------- UPDATE ----------------
+tick = 0
+
 def update():
-    global signal_state, timer, image_refs
+    global tick
 
     canvas.delete("all")
-    image_refs = []
 
-    draw_map()
-    draw_signal()
+    # MAP
+    if map_img:
+        canvas.create_image(0,0,image=map_img,anchor="nw")
+    else:
+        canvas.create_rectangle(0,0,850,550,fill="green")
 
-    timer += 1
-    if timer % 6 == 0:
-        signal_state = "RED" if signal_state == "GREEN" else "GREEN"
+    smart_signal()
 
-    # If no vehicles from server → simulate locally
+    # DRAW SIGNALS
+    for (x1,y1,x2,y2) in intersections:
+        color = "green" if signal_state=="GREEN" else "red"
+        canvas.create_oval(x1+40,y1+40,x1+60,y1+60,fill=color)
+
+    # create vehicles if none
     if not vehicles:
-        for i in range(3):
+        for i in range(6):
             vehicles[f"V{i}"] = {
-                "x": random.randint(0, 700),
-                "y": random.randint(0, 400),
-                "dir": random.choice(["H", "V"]),
-                "speed": random.randint(5, 10),
-                "turn": "STRAIGHT",
-                "data": {"distance": random.randint(10, 100)}
+                "x": random.randint(0,800),
+                "y": random.randint(0,450),
+                "dir": random.choice(["RIGHT","LEFT","UP","DOWN"]),
+                "speed": 3,
+                "base_speed": 3,
+                "behavior": "NORMAL",
+                "wait": 0,
+                "crashed": False,
+                "type": "normal"
             }
 
-    for vid, v in vehicles.items():
-        x, y = v["x"], v["y"]
-        speed = v["speed"]
-        direction = v["dir"]
+    # BRAKING
+    for id1,v1 in vehicles.items():
+        if v1["crashed"]: continue
 
-        # Movement logic
-        if direction == "H":
-            if not (signal_state == "RED" and 300 < x < 380):
-                x += speed
+        v1["speed"] = v1["base_speed"]
+
+        for id2,v2 in vehicles.items():
+            if id1!=id2:
+                r = predict_collision(v1,v2)
+                if r=="CRASH":
+                    log_event(f"Crash {id1}-{id2}")
+                elif r=="CRITICAL":
+                    v1["speed"]=0
+                elif r=="WARNING":
+                    v1["speed"]=v1["base_speed"]*0.5
+
+    warning = 0
+    critical = 0
+
+    # MOVE + DRAW
+    for vid,v in vehicles.items():
+        x,y = v["x"],v["y"]
+
+        if v["crashed"]:
+            canvas.create_text(x,y,text="💥",fill="red")
+            continue
+
+        stop = False
+        for (x1,y1,x2,y2) in intersections:
+            if x1<x<x2 and y1<y<y2:
+                if (v["dir"] in ["LEFT","RIGHT"] and signal_state=="RED") or \
+                   (v["dir"] in ["UP","DOWN"] and signal_state=="GREEN"):
+                    stop = True
+
+        if stop:
+            v["wait"] += 1
         else:
-            if not (signal_state == "RED" and 180 < y < 260):
-                y += speed
+            v["wait"] = 0
 
-        # Loop screen
-        if x > 750: x = 0
-        if y > 450: y = 0
+            if v["dir"]=="RIGHT": x+=v["speed"]
+            elif v["dir"]=="LEFT": x-=v["speed"]
+            elif v["dir"]=="UP": y-=v["speed"]
+            elif v["dir"]=="DOWN": y+=v["speed"]
 
-        v["x"], v["y"] = x, y
+        if x>850: x=0
+        if x<0: x=850
+        if y>550: y=0
+        if y<0: y=550
 
-        # Draw car
-        img = car_images.get(direction, car_images["H"])
-        image_refs.append(img)
+        v["x"],v["y"]=x,y
 
-        canvas.create_image(x, y, image=img)
-        canvas.create_text(x, y-15, text=vid, fill="white")
+        # count risks
+        for oid,other in vehicles.items():
+            if vid==oid: continue
+            r = predict_collision(v,other)
+            if r=="CRITICAL": critical+=1
+            elif r=="WARNING": warning+=1
 
-    root.after(500, update)
+        # COLOR BY BEHAVIOR
+        color_map = {
+            "AGGRESSIVE":"red",
+            "NORMAL":"blue",
+            "SAFE":"green"
+        }
+        color = color_map.get(v["behavior"],"blue")
+
+        canvas.create_rectangle(x-10,y-5,x+10,y+5,fill=color)
+
+        label = vid + ("🚑" if v["type"]=="emergency" else "")
+        canvas.create_text(x,y-12,text=label,fill="white")
+
+    avg_speed = sum(v["speed"] for v in vehicles.values())/len(vehicles)
+
+    stats.config(text=f"""
+Vehicles: {len(vehicles)}
+Avg Speed: {avg_speed:.2f}
+Warnings: {warning}
+Critical: {critical}
+Signal: {signal_state}
+""")
+
+    # GRAPH
+    if HAS_PLOT:
+        tick+=1
+        xdata.append(tick)
+        ydata.append(avg_speed)
+
+        ax.clear()
+        ax.plot(list(xdata), list(ydata))
+        plot.draw()
+
+    root.after(100, update)
 
 # ---------------- RUN ----------------
 update()
