@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Traffic Dashboard</title>
+</head>
+<body style="background:black; color:white; text-align:center;">
+
+<h2>🚗 AI TRAFFIC DASHBOARD</h2>
+
+<canvas id="map" width="800" height="500" style="border:1px solid white;"></canvas>
+
+<script>
+const canvas = document.getElementById("map");
+const ctx = canvas.getContext("2d");
+
+async function fetchData() {
+    let res = await fetch("/data");
+    return await res.json();
+}
+
+function draw(data) {
+    ctx.clearRect(0,0,800,500);
+
+    // 🔥 HEATMAP
+    data.hotspots.forEach(h => {
+        let intensity = Math.min(h.risk, 10);
+        ctx.fillStyle = `rgba(${intensity*25},0,0,0.4)`;
+        ctx.beginPath();
+        ctx.arc(h.x, h.y, 25, 0, Math.PI*2);
+        ctx.fill();
+    });
+
+    // 🚗 VEHICLES
+    data.vehicles.forEach(v => {
+        ctx.fillStyle = "cyan";
+        ctx.fillRect(v.x-4, v.y-4, 8, 8);
+    });
+
+    // 💥 CRASHES
+    data.crashes.forEach(c => {
+        ctx.fillStyle = "red";
+        ctx.fillText("💥", c.x, c.y);
+    });
+}
+
+async function update() {
+    let data = await fetchData();
+    draw(data);
+    setTimeout(update, 100);
+}
+
+update();
+</script>
+
+</body>
+</html>
