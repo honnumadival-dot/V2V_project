@@ -1,0 +1,1140 @@
+[16:49:09] TX ID=1 Dist=117.00 Speed=22
+[16:49:10] RX ID=3 Dist=92
+[16:49:10] TX ID=1 Dist=100.60 Speed=3
+[16:49:10] Vehicle 3 TTC=4.84 Risk=LOW
+[16:49:10] RX ID=3 Dist=71
+[16:49:10] TX ID=1 Dist=70.36 Speed=19
+[16:49:10] RX ID=3 Dist=9
+[16:49:10] Vehicle 3 TTC=1.29 Risk=HIGH
+[16:49:10] TX ID=1 Dist=76.62 Speed=26
+[16:49:10] RX ID=3 Dist=43
+[16:49:11] Vehicle 3 TTC=2.15 Risk=MEDIUM
+[16:49:11] RX ID=2 Dist=67
+[16:49:11] RX ID=2 Dist=53
+[16:49:11] TX ID=1 Dist=65.02 Speed=3
+[16:49:11] Vehicle 3 TTC=8.60 Risk=LOW
+[16:49:11] Vehicle 2 TTC=1.83 Risk=HIGH
+[16:49:11] RX ID=3 Dist=87
+[16:49:11] TX ID=1 Dist=49.41 Speed=7
+[16:49:11] RX ID=4 Dist=14
+[16:49:11] Vehicle 3 TTC=inf Risk=LOW
+[16:49:11] RX ID=3 Dist=87
+2 Risk=LOW
+[16:49:11] TX ID=1 Dist=39.65 Speed=6
+[16:49:12] Vehicle 4 TTC=2.80 Risk=MEDIUM
+[16:49:12] RX ID=4 Dist=14
+[16:49:12] TX ID=1 Dist=28.19 Speed=49
+[16:49:12] Vehicle 3 TTC=27.00 Risk=LOW
+[16:49:12] RX ID=3 Dist=81
+[16:49:12] Vehicle 2 TTC=2.79 Risk=MEDIUM
+[16:49:12] Vehicle 4 TTC=1.56 Risk=HIGH
+[16:49:12] RX ID=3 Dist=76
+[16:49:12] TX ID=1 Dist=22.11 Speed=14
+[16:49:12] RX ID=4 Dist=67
+[16:49:13] TX ID=1 Dist=40.07 Speed=35
+[16:49:13] Vehicle 3 TTC=6.33 Risk=LOW
+[16:49:13] Vehicle 2 TTC=2.30 Risk=MEDIUM
+[16:49:13] RX ID=2 Dist=22
+9 Risk=LOW
+[16:49:13] TX ID=1 Dist=71.24 Speed=18
+[16:49:13] RX ID=3 Dist=74
+[16:49:13] RX ID=4 Dist=11
+[16:49:13] Vehicle 3 TTC=9.25 Risk=LOW
+[16:49:13] TX ID=1 Dist=61.54 Speed=8
+[16:49:13] Vehicle 2 TTC=7.33 Risk=LOW
+[16:49:13] RX ID=2 Dist=9
+[16:49:13] Vehicle 4 TTC=0.79 Risk=CRITICAL
+[16:49:13] TX ID=1 Dist=46.53 Speed=17
+[16:49:14] RX ID=2 Dist=99
+[16:49:14] Vehicle 3 TTC=18.50 Risk=LOW
+[16:49:14] TX ID=1 Dist=34.72 Speed=12
+[16:49:14] Vehicle 2 TTC=0.60 Risk=CRITICAL
+[16:49:14] Vehicle 4 TTC=0.61 Risk=CRITICAL
+[16:49:14] TX ID=1 Dist=45.23 Speed=25
+[16:49:14] RX ID=4 Dist=84
+[16:49:14] TX ID=1 Dist=62.34 Speed=12
+[16:49:14] Vehicle 3 TTC=4.11 Risk=LOW
+[16:49:14] Vehicle 2 TTC=14.14 Risk=LOW
+[16:49:15] Vehicle 4 TTC=21.00 Risk=LOW
+[16:49:15] TX ID=1 Dist=79.00 Speed=36
+[16:49:15] RX ID=4 Dist=86
+[16:49:15] RX ID=2 Dist=17
+[16:49:15] Vehicle 3 TTC=3.70 Risk=MEDIUM
+[16:49:15] TX ID=1 Dist=72.60 Speed=32
+[16:49:15] Vehicle 2 TTC=0.74 Risk=CRITICAL
+[16:49:15] RX ID=3 Dist=45
+[16:49:15] Vehicle 4 TTC=28.67 Risk=LOW
+[16:49:15] TX ID=1 Dist=87.16 Speed=43
+[16:49:15] RX ID=2 Dist=91
+[16:49:16] RX ID=4 Dist=95
+[16:49:16] Vehicle 3 TTC=7.50 Risk=LOW
+[16:49:16] TX ID=1 Dist=82.70 Speed=11
+[16:49:16] RX ID=3 Dist=13
+[16:49:16] Vehicle 2 TTC=2.02 Risk=MEDIUM
+[16:49:16] Vehicle 4 TTC=3.06 Risk=MEDIUM
+[16:49:16] RX ID=3 Dist=71
+[16:49:16] TX ID=1 Dist=88.02 Speed=14
+[16:49:16] RX ID=2 Dist=12
+[16:49:16] RX ID=2 Dist=91
+[16:49:16] TX ID=1 Dist=66.01 Speed=13
+[16:49:16] Vehicle 3 TTC=2.73 Risk=MEDIUM
+[16:49:16] Vehicle 2 TTC=2.84 Risk=MEDIUM
+[16:49:16] Vehicle 4 TTC=6.79 Risk=LOW
+[16:49:17] RX ID=2 Dist=81
+[16:49:17] TX ID=1 Dist=46.81 Speed=46
+[16:49:17] RX ID=4 Dist=20
+[16:49:17] Vehicle 3 TTC=4.73 Risk=LOW
+[16:49:17] TX ID=1 Dist=74.08 Speed=45
+[16:49:17] RX ID=4 Dist=10
+[16:49:17] Vehicle 2 TTC=4.76 Risk=LOW
+[16:49:17] Vehicle 4 TTC=0.67 Risk=CRITICAL
+[16:49:17] RX ID=2 Dist=38
+[16:49:17] TX ID=1 Dist=84.85 Speed=36
+[16:49:17] Vehicle 3 TTC=3.94 Risk=MEDIUM
+[16:49:17] RX ID=2 Dist=31
+[16:49:18] Vehicle 2 TTC=2.92 Risk=MEDIUM
+[16:49:18] TX ID=1 Dist=71.71 Speed=34
+[16:49:18] RX ID=4 Dist=66
+[16:49:18] Vehicle 4 TTC=1.67 Risk=HIGH
+[16:49:18] RX ID=4 Dist=73
+[16:49:18] TX ID=1 Dist=84.63 Speed=18
+[16:49:18] RX ID=3 Dist=51
+[16:49:18] TX ID=1 Dist=69.98 Speed=8
+[16:49:18] Vehicle 3 TTC=6.38 Risk=LOW
+[16:49:18] Vehicle 2 TTC=0.86 Risk=CRITICAL
+[16:49:18] RX ID=3 Dist=48
+[16:49:18] Vehicle 4 TTC=73.00 Risk=LOW
+[16:49:19] TX ID=1 Dist=65.99 Speed=1
+[16:49:19] RX ID=4 Dist=27
+[16:49:19] RX ID=2 Dist=15
+[16:49:19] Vehicle 3 TTC=1.71 Risk=HIGH
+[16:49:19] TX ID=1 Dist=44.39 Speed=28
+[16:49:19] RX ID=4 Dist=70
+[16:49:19] Vehicle 2 TTC=0.68 Risk=CRITICAL
+[16:49:19] Vehicle 4 TTC=1.00 Risk=HIGH
+[16:49:19] RX ID=4 Dist=56
+[16:49:19] TX ID=1 Dist=67.03 Speed=5
+[16:49:19] RX ID=4 Dist=54
+[16:49:19] Vehicle 3 TTC=2.00 Risk=MEDIUM
+[16:49:20] TX ID=1 Dist=45.82 Speed=8
+[16:49:20] RX ID=3 Dist=42
+[16:49:20] Vehicle 2 TTC=0.83 Risk=CRITICAL
+[16:49:20] Vehicle 4 TTC=3.60 Risk=MEDIUM
+[16:49:20] RX ID=2 Dist=77
+[16:49:20] TX ID=1 Dist=39.89 Speed=15
+[16:49:20] Vehicle 3 TTC=1.14 Risk=HIGH
+[16:49:20] Vehicle 2 TTC=4.05 Risk=LOW
+[16:49:20] TX ID=1 Dist=41.94 Speed=45
+[16:49:20] RX ID=4 Dist=74
+[16:49:20] Vehicle 4 TTC=2.25 Risk=MEDIUM
+[16:49:21] TX ID=1 Dist=56.36 Speed=44
+[16:49:21] RX ID=2 Dist=8
+[16:49:21] Vehicle 3 TTC=4.20 Risk=LOW
+[16:49:21] Vehicle 2 TTC=0.50 Risk=CRITICAL
+[16:49:21] RX ID=4 Dist=74
+[16:49:21] TX ID=1 Dist=80.22 Speed=25
+[16:49:21] Vehicle 4 TTC=74.00 Risk=LOW
+[16:49:21] RX ID=2 Dist=33
+[16:49:21] TX ID=1 Dist=52.53 Speed=49
+[16:49:21] Vehicle 3 TTC=21.00 Risk=LOW
+[16:49:21] Vehicle 2 TTC=9.50 Risk=LOW
+[16:49:21] Vehicle 4 TTC=2.39 Risk=MEDIUM
+[16:49:21] RX ID=2 Dist=80
+[16:49:21] TX ID=1 Dist=77.52 Speed=34
+[16:49:22] RX ID=2 Dist=5
+[16:49:22] RX ID=4 Dist=22
+[16:49:22] TX ID=1 Dist=74.51 Speed=32
+[16:49:22] Vehicle 3 TTC=1.14 Risk=HIGH
+[16:49:22] Vehicle 2 TTC=0.16 Risk=CRITICAL
+[16:49:22] RX ID=3 Dist=87
+[16:49:22] Vehicle 4 TTC=0.48 Risk=CRITICAL
+[16:49:22] TX ID=1 Dist=67.51 Speed=37
+[16:49:22] TX ID=1 Dist=60.50 Speed=42
+[16:49:22] Vehicle 3 TTC=12.43 Risk=LOW
+[16:49:22] RX ID=2 Dist=55
+[16:49:23] Vehicle 2 TTC=0.16 Risk=CRITICAL
+[16:49:23] Vehicle 4 TTC=0.49 Risk=CRITICAL
+[16:49:23] RX ID=2 Dist=91
+[16:49:23] TX ID=1 Dist=45.50 Speed=9
+[16:49:23] RX ID=4 Dist=73
+[16:49:23] Vehicle 3 TTC=2.23 Risk=MEDIUM
+[16:49:23] RX ID=4 Dist=44
+[16:49:23] Vehicle 2 TTC=30.33 Risk=LOW
+[16:49:23] TX ID=1 Dist=57.30 Speed=29
+[16:49:23] Vehicle 4 TTC=5.21 Risk=LOW
+[16:49:23] TX ID=1 Dist=82.38 Speed=39
+[16:49:24] Vehicle 3 TTC=2.17 Risk=MEDIUM
+[16:49:24] RX ID=3 Dist=77
+33 Risk=LOW
+[16:49:24] Vehicle 4 TTC=3.38 Risk=MEDIUM
+[16:49:24] TX ID=1 Dist=58.23 Speed=26
+[16:49:24] RX ID=2 Dist=52
+[16:49:24] TX ID=1 Dist=73.34 Speed=15
+[16:49:24] RX ID=3 Dist=22
+[16:49:24] Vehicle 3 TTC=22.00 Risk=LOW
+[16:49:24] Vehicle 2 TTC=4.33 Risk=LOW
+[16:49:24] Vehicle 4 TTC=14.67 Risk=LOW
+[16:49:24] RX ID=4 Dist=49
+[16:49:24] TX ID=1 Dist=89.60 Speed=13
+[16:49:25] RX ID=3 Dist=45
+[16:49:25] RX ID=4 Dist=57
+[16:49:25] Vehicle 3 TTC=1.80 Risk=HIGH
+[16:49:25] TX ID=1 Dist=97.76 Speed=29
+[16:49:25] Vehicle 2 TTC=6.50 Risk=LOW
+[16:49:25] Vehicle 4 TTC=4.90 Risk=LOW
+[16:49:25] RX ID=4 Dist=37
+[16:49:25] TX ID=1 Dist=90.66 Speed=24
+[16:49:25] RX ID=2 Dist=47
+[16:49:25] Vehicle 3 TTC=4.09 Risk=LOW
+[16:49:25] RX ID=2 Dist=40
+[16:49:26] Vehicle 2 TTC=15.67 Risk=LOW
+[16:49:26] TX ID=1 Dist=80.79 Speed=26
+[16:49:26] Vehicle 4 TTC=7.40 Risk=LOW
+[16:49:26] RX ID=4 Dist=97
+[16:49:26] TX ID=1 Dist=54.88 Speed=9
+[16:49:26] RX ID=3 Dist=32
+[16:49:26] Vehicle 3 TTC=1.45 Risk=HIGH
+[16:49:26] Vehicle 2 TTC=5.00 Risk=LOW
+[16:49:26] RX ID=2 Dist=40
+[16:49:26] TX ID=1 Dist=69.33 Speed=48
+[16:49:26] Vehicle 4 TTC=6.93 Risk=LOW
+[16:49:26] RX ID=2 Dist=31
+[16:49:26] TX ID=1 Dist=79.20 Speed=9
+[16:49:26] RX ID=3 Dist=50
+[16:49:26] Vehicle 3 TTC=25.00 Risk=LOW
+[16:49:27] Vehicle 2 TTC=2.58 Risk=MEDIUM
+[16:49:27] RX ID=4 Dist=99
+[16:49:27] TX ID=1 Dist=76.32 Speed=28
+[16:49:27] Vehicle 4 TTC=9.70 Risk=LOW
+[16:49:27] RX ID=2 Dist=68
+[16:49:27] TX ID=1 Dist=64.19 Speed=26
+[16:49:27] Vehicle 3 TTC=1.72 Risk=HIGH
+[16:49:27] RX ID=3 Dist=20
+[16:49:27] Vehicle 2 TTC=2.62 Risk=MEDIUM
+[16:49:27] TX ID=1 Dist=77.71 Speed=24
+[16:49:27] Vehicle 4 TTC=16.50 Risk=LOW
+[16:49:27] RX ID=4 Dist=24
+[16:49:28] RX ID=3 Dist=93
+[16:49:28] TX ID=1 Dist=93.83 Speed=1
+[16:49:28] Vehicle 3 TTC=46.50 Risk=LOW
+[16:49:28] RX ID=4 Dist=54
+[16:49:28] Vehicle 2 TTC=5.67 Risk=LOW
+[16:49:28] Vehicle 4 TTC=1.20 Risk=HIGH
+[16:49:28] TX ID=1 Dist=95.10 Speed=48
+[16:49:28] RX ID=4 Dist=6
+[16:49:28] RX ID=4 Dist=56
+[16:49:28] TX ID=1 Dist=101.86 Speed=41
+[16:49:28] Vehicle 3 TTC=2.82 Risk=MEDIUM
+[16:49:28] RX ID=2 Dist=91
+[16:49:28] Vehicle 2 TTC=3.58 Risk=MEDIUM
+[16:49:29] Vehicle 4 TTC=3.50 Risk=MEDIUM
+[16:49:29] RX ID=2 Dist=57
+[16:49:29] TX ID=1 Dist=71.11 Speed=13
+[16:49:29] RX ID=4 Dist=34
+[16:49:29] Vehicle 3 TTC=4.23 Risk=LOW
+[16:49:29] TX ID=1 Dist=53.47 Speed=23
+[16:49:29] RX ID=2 Dist=52
+[16:49:29] Vehicle 2 TTC=2.28 Risk=MEDIUM
+[16:49:29] Vehicle 4 TTC=1.36 Risk=HIGH
+[16:49:29] RX ID=3 Dist=16
+[16:49:29] TX ID=1 Dist=38.88 Speed=16
+[16:49:29] RX ID=3 Dist=77
+[16:49:30] TX ID=1 Dist=71.33 Speed=13
+[16:49:30] Vehicle 3 TTC=12.83 Risk=LOW
+[16:49:30] RX ID=4 Dist=97
+[16:49:30] Vehicle 2 TTC=5.20 Risk=LOW
+[16:49:30] Vehicle 4 TTC=2.27 Risk=MEDIUM
+[16:49:30] TX ID=1 Dist=77.60 Speed=10
+[16:49:30] RX ID=2 Dist=8
+[16:49:30] Vehicle 3 TTC=7.70 Risk=LOW
+[16:49:30] RX ID=2 Dist=65
+[16:49:30] TX ID=1 Dist=76.56 Speed=29
+[16:49:30] Vehicle 2 TTC=4.00 Risk=LOW
+[16:49:30] RX ID=2 Dist=24
+[16:49:30] Vehicle 4 TTC=7.46 Risk=LOW
+[16:49:31] RX ID=4 Dist=7
+[16:49:31] TX ID=1 Dist=90.74 Speed=24
+[16:49:31] RX ID=3 Dist=46
+[16:49:31] TX ID=1 Dist=80.04 Speed=20
+[16:49:31] RX ID=4 Dist=40
+[16:49:31] Vehicle 3 TTC=3.54 Risk=MEDIUM
+[16:49:31] Vehicle 2 TTC=2.67 Risk=MEDIUM
+[16:49:31] RX ID=3 Dist=55
+[16:49:31] Vehicle 4 TTC=1.40 Risk=HIGH
+[16:49:31] TX ID=1 Dist=82.82 Speed=39
+[16:49:31] RX ID=2 Dist=77
+[16:49:32] Vehicle 3 TTC=4.58 Risk=LOW
+[16:49:32] TX ID=1 Dist=82.89 Speed=22
+[16:49:32] Vehicle 2 TTC=4.53 Risk=LOW
+[16:49:32] RX ID=3 Dist=71
+[16:49:32] Vehicle 4 TTC=3.08 Risk=MEDIUM
+[16:49:32] RX ID=3 Dist=52
+[16:49:32] TX ID=1 Dist=95.34 Speed=4
+[16:49:32] RX ID=3 Dist=19
+[16:49:32] Vehicle 3 TTC=inf Risk=LOW
+[16:49:32] TX ID=1 Dist=78.40 Speed=7
+[16:49:32] Vehicle 2 TTC=2.48 Risk=MEDIUM
+[16:49:32] Vehicle 4 TTC=1.48 Risk=HIGH
+[16:49:32] RX ID=4 Dist=33
+[16:49:33] TX ID=1 Dist=62.24 Speed=13
+[16:49:33] RX ID=4 Dist=63
+[16:49:33] Vehicle 3 TTC=0.59 Risk=CRITICAL
+[16:49:33] RX ID=4 Dist=49
+[16:49:33] Vehicle 2 TTC=77.00 Risk=LOW
+[16:49:33] TX ID=1 Dist=73.74 Speed=7
+[16:49:33] RX ID=2 Dist=93
+[16:49:33] Vehicle 4 TTC=2.03 Risk=MEDIUM
+[16:49:33] TX ID=1 Dist=61.45 Speed=36
+[16:49:33] RX ID=4 Dist=65
+[16:49:33] Vehicle 3 TTC=0.66 Risk=CRITICAL
+[16:49:34] Vehicle 2 TTC=13.29 Risk=LOW
+[16:49:34] RX ID=2 Dist=90
+[16:49:34] TX ID=1 Dist=56.47 Speed=35
+[16:49:34] Vehicle 4 TTC=2.60 Risk=MEDIUM
+[16:49:34] RX ID=3 Dist=73
+[16:49:34] TX ID=1 Dist=68.28 Speed=45
+[16:49:34] Vehicle 3 TTC=3.65 Risk=MEDIUM
+[16:49:34] RX ID=4 Dist=44
+[16:49:34] Vehicle 2 TTC=11.25 Risk=LOW
+[16:49:34] Vehicle 4 TTC=3.25 Risk=MEDIUM
+[16:49:34] RX ID=4 Dist=9
+[16:49:34] TX ID=1 Dist=79.77 Speed=18
+[16:49:34] RX ID=3 Dist=22
+[16:49:35] TX ID=1 Dist=77.86 Speed=35
+[16:49:35] Vehicle 3 TTC=1.22 Risk=HIGH
+[16:49:35] Vehicle 2 TTC=8.18 Risk=LOW
+[16:49:35] RX ID=4 Dist=19
+[16:49:35] Vehicle 4 TTC=1.00 Risk=HIGH
+[16:49:35] TX ID=1 Dist=56.32 Speed=22
+[16:49:35] TX ID=1 Dist=40.99 Speed=39
+[16:49:35] Vehicle 3 TTC=1.29 Risk=HIGH
+[16:49:35] Vehicle 2 TTC=3.75 Risk=MEDIUM
+[16:49:36] TX ID=1 Dist=38.99 Speed=28
+[16:49:36] Vehicle 4 TTC=1.48 Risk=HIGH
+[16:49:36] RX ID=2 Dist=98
+[16:49:36] RX ID=4 Dist=6
+[16:49:36] TX ID=1 Dist=62.20 Speed=18
+[16:49:36] RX ID=2 Dist=85
+[16:49:36] Vehicle 3 TTC=7.33 Risk=LOW
+[16:49:36] Vehicle 2 TTC=6.07 Risk=LOW
+[16:49:36] Vehicle 4 TTC=0.25 Risk=CRITICAL
+[16:49:36] RX ID=3 Dist=89
+[16:49:36] TX ID=1 Dist=65.32 Speed=9
+[16:49:36] RX ID=3 Dist=90
+[16:49:37] RX ID=2 Dist=37
+[16:49:37] TX ID=1 Dist=82.79 Speed=1
+[16:49:37] Vehicle 3 TTC=30.00 Risk=LOW
+[16:49:37] Vehicle 2 TTC=1.85 Risk=HIGH
+[16:49:37] Vehicle 4 TTC=0.25 Risk=CRITICAL
+[16:49:37] TX ID=1 Dist=70.47 Speed=46
+[16:49:37] RX ID=4 Dist=77
+[16:49:37] RX ID=2 Dist=94
+[16:49:37] Vehicle 3 TTC=5.62 Risk=LOW
+[16:49:37] TX ID=1 Dist=47.08 Speed=48
+[16:49:37] Vehicle 2 TTC=3.03 Risk=MEDIUM
+[16:49:37] RX ID=2 Dist=71
+[16:49:37] Vehicle 4 TTC=19.25 Risk=LOW
+[16:49:38] TX ID=1 Dist=65.05 Speed=12
+[16:49:38] RX ID=4 Dist=34
+[16:49:38] Vehicle 3 TTC=10.00 Risk=LOW
+[16:49:38] RX ID=2 Dist=22
+[16:49:38] TX ID=1 Dist=47.43 Speed=21
+[16:49:38] Vehicle 2 TTC=17.75 Risk=LOW
+[16:49:38] RX ID=3 Dist=59
+[16:49:38] Vehicle 4 TTC=17.00 Risk=LOW
+[16:49:38] RX ID=3 Dist=17
+[16:49:38] TX ID=1 Dist=35.66 Speed=7
+[16:49:38] RX ID=4 Dist=97
+[16:49:38] Vehicle 3 TTC=5.67 Risk=LOW
+[16:49:39] Vehicle 2 TTC=1.38 Risk=HIGH
+[16:49:39] RX ID=2 Dist=80
+[16:49:39] TX ID=1 Dist=47.79 Speed=33
+[16:49:39] Vehicle 4 TTC=6.93 Risk=LOW
+[16:49:39] RX ID=4 Dist=63
+[16:49:39] TX ID=1 Dist=49.88 Speed=1
+[16:49:39] Vehicle 3 TTC=0.89 Risk=CRITICAL
+[16:49:39] Vehicle 2 TTC=8.00 Risk=LOW
+[16:49:39] RX ID=3 Dist=18
+[16:49:39] Vehicle 4 TTC=2.03 Risk=MEDIUM
+[16:49:39] TX ID=1 Dist=37.53 Speed=5
+[16:49:39] RX ID=4 Dist=28
+[16:49:40] TX ID=1 Dist=27.32 Speed=46
+[16:49:40] Vehicle 3 TTC=1.80 Risk=HIGH
+[16:49:40] RX ID=3 Dist=8
+[16:49:40] Vehicle 2 TTC=3.48 Risk=MEDIUM
+[16:49:40] Vehicle 4 TTC=2.33 Risk=MEDIUM
+[16:49:40] TX ID=1 Dist=41.59 Speed=40
+[16:49:40] RX ID=2 Dist=23
+[16:49:40] TX ID=1 Dist=51.35 Speed=30
+[16:49:40] RX ID=2 Dist=44
+[16:49:40] Vehicle 3 TTC=0.38 Risk=CRITICAL
+[16:49:40] Vehicle 2 TTC=1.33 Risk=HIGH
+[16:49:40] RX ID=2 Dist=47
+3 Risk=HIGH
+[16:49:40] TX ID=1 Dist=50.01 Speed=6
+[16:49:41] RX ID=3 Dist=85
+[16:49:41] Vehicle 3 TTC=17.00 Risk=LOW
+[16:49:41] TX ID=1 Dist=57.21 Speed=32
+[16:49:41] Vehicle 2 TTC=2.24 Risk=MEDIUM
+[16:49:41] Vehicle 4 TTC=0.97 Risk=CRITICAL
+[16:49:41] RX ID=3 Dist=31
+[16:49:41] TX ID=1 Dist=61.92 Speed=50
+[16:49:41] RX ID=3 Dist=12
+[16:49:41] RX ID=3 Dist=33
+[16:49:41] Vehicle 3 TTC=0.55 Risk=CRITICAL
+[16:49:41] Vehicle 2 TTC=2.61 Risk=MEDIUM
+[16:49:42] TX ID=1 Dist=67.95 Speed=32
+[16:49:42] RX ID=4 Dist=25
+[16:49:42] Vehicle 4 TTC=1.08 Risk=HIGH
+[16:49:42] RX ID=4 Dist=48
+[16:49:42] TX ID=1 Dist=47.97 Speed=45
+[16:49:42] RX ID=3 Dist=83
+[16:49:42] Vehicle 3 TTC=3.46 Risk=MEDIUM
+[16:49:42] Vehicle 2 TTC=3.62 Risk=MEDIUM
+[16:49:42] RX ID=3 Dist=75
+[16:49:42] TX ID=1 Dist=57.98 Speed=0
+[16:49:42] Vehicle 4 TTC=2.00 Risk=MEDIUM
+[16:49:42] RX ID=2 Dist=15
+[16:49:42] TX ID=1 Dist=60.39 Speed=33
+[16:49:43] Vehicle 3 TTC=3.95 Risk=MEDIUM
+[16:49:43] RX ID=4 Dist=49
+[16:49:43] TX ID=1 Dist=59.83 Speed=3
+[16:49:43] Vehicle 2 TTC=7.50 Risk=LOW
+[16:49:43] Vehicle 4 TTC=8.00 Risk=LOW
+[16:49:43] RX ID=4 Dist=63
+[16:49:43] TX ID=1 Dist=74.70 Speed=50
+[16:49:43] RX ID=4 Dist=75
+[16:49:43] Vehicle 3 TTC=4.69 Risk=LOW
+[16:49:43] Vehicle 2 TTC=3.00 Risk=MEDIUM
+[16:49:43] RX ID=3 Dist=93
+[16:49:43] TX ID=1 Dist=87.22 Speed=14
+[16:49:43] Vehicle 4 TTC=37.50 Risk=LOW
+[16:49:43] RX ID=4 Dist=78
+[16:49:44] RX ID=4 Dist=79
+[16:49:44] TX ID=1 Dist=76.33 Speed=47
+[16:49:44] Vehicle 3 TTC=2.74 Risk=MEDIUM
+[16:49:44] Vehicle 2 TTC=0.41 Risk=CRITICAL
+[16:49:44] Vehicle 4 TTC=6.08 Risk=LOW
+[16:49:44] RX ID=3 Dist=57
+[16:49:44] TX ID=1 Dist=75.40 Speed=16
+[16:49:44] RX ID=3 Dist=25
+[16:49:44] Vehicle 3 TTC=1.47 Risk=HIGH
+[16:49:44] TX ID=1 Dist=74.44 Speed=36
+[16:49:44] Vehicle 2 TTC=0.54 Risk=CRITICAL
+[16:49:44] Vehicle 4 TTC=19.75 Risk=LOW
+[16:49:44] RX ID=3 Dist=94
+[16:49:45] TX ID=1 Dist=85.86 Speed=15
+[16:49:45] RX ID=2 Dist=90
+[16:49:45] Vehicle 3 TTC=9.40 Risk=LOW
+[16:49:45] Vehicle 2 TTC=6.92 Risk=LOW
+[16:49:45] RX ID=4 Dist=83
+[16:49:45] TX ID=1 Dist=75.12 Speed=1
+
+[16:49:45] RX ID=2 Dist=87
+[16:49:45] TX ID=1 Dist=59.07 Speed=25
+[16:49:45] Vehicle 3 TTC=23.50 Risk=LOW
+[16:49:45] Vehicle 2 TTC=21.75 Risk=LOW
+[16:49:46] Vehicle 4 TTC=5.93 Risk=LOW
+[16:49:46] RX ID=2 Dist=82
+[16:49:46] TX ID=1 Dist=41.04 Speed=16
+[16:49:46] RX ID=2 Dist=59
+[16:49:46] TX ID=1 Dist=52.63 Speed=33
+[16:49:46] Vehicle 3 TTC=13.43 Risk=LOW
+[16:49:46] Vehicle 2 TTC=2.46 Risk=MEDIUM
+[16:49:46] RX ID=3 Dist=41
+[16:49:46] Vehicle 4 TTC=27.67 Risk=LOW
+[16:49:46] TX ID=1 Dist=58.78 Speed=38
+[16:49:46] RX ID=4 Dist=68
+[16:49:47] Vehicle 3 TTC=1.95 Risk=HIGH
+[16:49:47] TX ID=1 Dist=46.47 Speed=3
+[16:49:47] Vehicle 2 TTC=7.38 Risk=LOW
+[16:49:47] RX ID=3 Dist=13
+[16:49:47] Vehicle 4 TTC=8.50 Risk=LOW
+[16:49:47] RX ID=2 Dist=44
+[16:49:47] TX ID=1 Dist=65.08 Speed=13
+[16:49:47] RX ID=3 Dist=57
+[16:49:47] Vehicle 3 TTC=4.75 Risk=LOW
+[16:49:47] TX ID=1 Dist=81.05 Speed=20
+[16:49:47] Vehicle 2 TTC=1.52 Risk=HIGH
+[16:49:47] Vehicle 4 TTC=1.74 Risk=HIGH
+[16:49:47] RX ID=2 Dist=73
+[16:49:48] TX ID=1 Dist=63.43 Speed=4
+[16:49:48] RX ID=4 Dist=42
+[16:49:48] Vehicle 3 TTC=5.18 Risk=LOW
+[16:49:48] TX ID=1 Dist=53.26 Speed=34
+[16:49:48] Vehicle 2 TTC=3.65 Risk=MEDIUM
+[16:49:48] RX ID=3 Dist=41
+[16:49:48] Vehicle 4 TTC=1.50 Risk=HIGH
+[16:49:48] RX ID=3 Dist=91
+[16:49:48] TX ID=1 Dist=63.95 Speed=43
+[16:49:48] RX ID=4 Dist=28
+[16:49:48] Vehicle 3 TTC=3.50 Risk=MEDIUM
+[16:49:48] TX ID=1 Dist=73.57 Speed=27
+[16:49:48] Vehicle 2 TTC=7.30 Risk=LOW
+[16:49:49] Vehicle 4 TTC=1.56 Risk=HIGH
+[16:49:49] RX ID=2 Dist=94
+[16:49:49] TX ID=1 Dist=56.94 Speed=41
+[16:49:49] RX ID=2 Dist=84
+[16:49:49] Vehicle 3 TTC=10.11 Risk=LOW
+[16:49:49] RX ID=2 Dist=58
+[16:49:49] Vehicle 2 TTC=4.42 Risk=LOW
+[16:49:49] TX ID=1 Dist=70.97 Speed=10
+[16:49:49] Vehicle 4 TTC=28.00 Risk=LOW
+[16:49:49] RX ID=4 Dist=11
+[16:49:49] TX ID=1 Dist=64.58 Speed=3
+[16:49:50] RX ID=3 Dist=62
+[16:49:50] Vehicle 3 TTC=6.20 Risk=LOW
+[16:49:50] TX ID=1 Dist=83.55 Speed=38
+[16:49:50] Vehicle 2 TTC=5.80 Risk=LOW
+[16:49:50] RX ID=2 Dist=67
+[16:49:50] Vehicle 4 TTC=2.75 Risk=MEDIUM
+[16:49:50] RX ID=4 Dist=76
+[16:49:50] TX ID=1 Dist=79.73 Speed=46
+[16:49:50] Vehicle 3 TTC=2.70 Risk=MEDIUM
+[16:49:50] TX ID=1 Dist=74.24 Speed=7
+[16:49:50] Vehicle 2 TTC=3.05 Risk=MEDIUM
+[16:49:50] RX ID=2 Dist=8
+[16:49:50] Vehicle 4 TTC=5.07 Risk=LOW
+[16:49:51] TX ID=1 Dist=86.54 Speed=45
+[16:49:51] RX ID=2 Dist=94
+[16:49:51] Vehicle 3 TTC=7.75 Risk=LOW
+[16:49:51] RX ID=3 Dist=90
+[16:49:51] TX ID=1 Dist=63.53 Speed=10
+[16:49:51] Vehicle 2 TTC=2.94 Risk=MEDIUM
+[16:49:51] Vehicle 4 TTC=1.65 Risk=HIGH
+[16:49:51] RX ID=4 Dist=75
+[16:49:51] TX ID=1 Dist=65.72 Speed=32
+[16:49:51] RX ID=3 Dist=49
+[16:49:51] Vehicle 3 TTC=8.17 Risk=LOW
+[16:49:52] TX ID=1 Dist=77.03 Speed=4
+[16:49:52] Vehicle 2 TTC=94.00 Risk=LOW
+[16:49:52] RX ID=2 Dist=49
+[16:49:52] Vehicle 4 TTC=3.75 Risk=MEDIUM
+[16:49:52] TX ID=1 Dist=70.62 Speed=1
+[16:49:52] RX ID=2 Dist=58
+[16:49:52] Vehicle 3 TTC=3.06 Risk=MEDIUM
+[16:49:52] RX ID=4 Dist=45
+[16:49:52] TX ID=1 Dist=49.97 Speed=37
+[16:49:52] Vehicle 2 TTC=58.00 Risk=LOW
+[16:49:52] Vehicle 4 TTC=2.50 Risk=MEDIUM
+[16:49:52] RX ID=4 Dist=31
+[16:49:52] TX ID=1 Dist=40.78 Speed=0
+[16:49:52] RX ID=3 Dist=95
+[16:49:53] Vehicle 3 TTC=7.92 Risk=LOW
+[16:49:53] RX ID=2 Dist=33
+[16:49:53] Vehicle 2 TTC=2.23 Risk=MEDIUM
+[16:49:53] TX ID=1 Dist=61.67 Speed=26
+[16:49:53] Vehicle 4 TTC=7.75 Risk=LOW
+[16:49:53] RX ID=2 Dist=40
+[16:49:53] TX ID=1 Dist=76.60 Speed=43
+[16:49:53] Vehicle 3 TTC=10.56 Risk=LOW
+[16:49:53] Vehicle 2 TTC=4.00 Risk=LOW
+[16:49:53] Vehicle 4 TTC=2.83 Risk=MEDIUM
+[16:49:53] TX ID=1 Dist=79.96 Speed=36
+[16:49:53] RX ID=3 Dist=68
+[16:49:54] RX ID=4 Dist=15
+[16:49:54] Vehicle 3 TTC=5.23 Risk=LOW
+[16:49:54] TX ID=1 Dist=56.78 Speed=17
+[16:49:54] Vehicle 2 TTC=5.71 Risk=LOW
+[16:49:54] Vehicle 4 TTC=3.75 Risk=MEDIUM
+[16:49:54] RX ID=3 Dist=48
+[16:49:54] TX ID=1 Dist=57.67 Speed=36
+[16:49:54] RX ID=2 Dist=14
+[16:49:54] TX ID=1 Dist=58.60 Speed=44
+[16:49:54] RX ID=2 Dist=23
+[16:49:54] Vehicle 3 TTC=4.36 Risk=LOW
+[16:49:55] Vehicle 2 TTC=1.08 Risk=HIGH
+[16:49:55] Vehicle 4 TTC=0.79 Risk=CRITICAL
+[16:49:55] TX ID=1 Dist=67.16 Speed=48
+[16:49:55] RX ID=3 Dist=99
+[16:49:55] Vehicle 3 TTC=3.54 Risk=MEDIUM
+[16:49:55] TX ID=1 Dist=61.50 Speed=4
+[16:49:55] RX ID=3 Dist=54
+[16:49:55] Vehicle 2 TTC=0.57 Risk=CRITICAL
+[16:49:55] Vehicle 4 TTC=0.50 Risk=CRITICAL
+[16:49:55] RX ID=2 Dist=66
+[16:49:55] TX ID=1 Dist=61.30 Speed=34
+[16:49:56] RX ID=2 Dist=50
+[16:49:56] Vehicle 3 TTC=27.00 Risk=LOW
+[16:49:56] RX ID=3 Dist=13
+[16:49:56] TX ID=1 Dist=78.38 Speed=15
+[16:49:56] Vehicle 2 TTC=4.55 Risk=LOW
+[16:49:56] Vehicle 4 TTC=0.88 Risk=CRITICAL
+[16:49:56] RX ID=4 Dist=76
+[16:49:56] TX ID=1 Dist=58.23 Speed=10
+[16:49:56] RX ID=2 Dist=29
+[16:49:56] Vehicle 3 TTC=2.60 Risk=MEDIUM
+[16:49:56] RX ID=4 Dist=20
+[16:49:56] Vehicle 2 TTC=0.94 Risk=CRITICAL
+[16:49:56] Vehicle 4 TTC=6.33 Risk=LOW
+[16:49:56] TX ID=1 Dist=38.94 Speed=35
+[16:49:57] RX ID=2 Dist=57
+6 Speed=10
+[16:49:57] Vehicle 3 TTC=0.45 Risk=CRITICAL
+[16:49:57] Vehicle 2 TTC=3.17 Risk=MEDIUM
+[16:49:57] RX ID=3 Dist=88
+[16:49:57] Vehicle 4 TTC=0.57 Risk=CRITICAL
+[16:49:57] TX ID=1 Dist=68.58 Speed=47
+[16:49:57] RX ID=2 Dist=8
+[16:49:57] TX ID=1 Dist=66.75 Speed=17
+[16:49:57] RX ID=4 Dist=24
+[16:49:57] Vehicle 3 TTC=29.33 Risk=LOW
+[16:49:57] Vehicle 2 TTC=0.30 Risk=CRITICAL
+[16:49:58] RX ID=3 Dist=20
+[16:49:58] Vehicle 4 TTC=0.73 Risk=CRITICAL
+[16:49:58] TX ID=1 Dist=65.25 Speed=25
+[16:49:58] RX ID=3 Dist=26
+[16:49:58] RX ID=2 Dist=71
+[16:49:58] TX ID=1 Dist=75.95 Speed=1
+[16:49:58] Vehicle 3 TTC=0.93 Risk=CRITICAL
+[16:49:58] RX ID=2 Dist=59
+[16:49:58] Vehicle 2 TTC=14.20 Risk=LOW
+[16:49:58] Vehicle 4 TTC=0.73 Risk=CRITICAL
+[16:49:58] TX ID=1 Dist=88.77 Speed=30
+[16:49:58] RX ID=3 Dist=5
+[16:49:58] TX ID=1 Dist=75.66 Speed=11
+[16:49:59] Vehicle 3 TTC=0.62 Risk=CRITICAL
+[16:49:59] RX ID=3 Dist=78
+[16:49:59] Vehicle 2 TTC=2.57 Risk=MEDIUM
+[16:49:59] Vehicle 4 TTC=2.18 Risk=MEDIUM
+[16:49:59] RX ID=3 Dist=8
+[16:49:59] TX ID=1 Dist=90.20 Speed=26
+[16:49:59] Vehicle 3 TTC=0.36 Risk=CRITICAL
+[16:49:59] RX ID=3 Dist=7
+[16:49:59] TX ID=1 Dist=67.32 Speed=0
+[16:49:59] Vehicle 2 TTC=1.97 Risk=HIGH
+[16:49:59] Vehicle 4 TTC=6.00 Risk=LOW
+[16:49:59] RX ID=4 Dist=55
+[16:49:59] TX ID=1 Dist=57.19 Speed=22
+[16:49:59] RX ID=3 Dist=81
+[16:49:59] Vehicle 3 TTC=8.10 Risk=LOW
+[16:50:00] Vehicle 2 TTC=29.50 Risk=LOW
+[16:50:00] Vehicle 4 TTC=inf Risk=LOW
+[16:50:00] RX ID=2 Dist=76
+[16:50:00] TX ID=1 Dist=82.31 Speed=42
+[16:50:00] RX ID=2 Dist=96
+[16:50:00] TX ID=1 Dist=79.79 Speed=21
+[16:50:00] Vehicle 3 TTC=3.38 Risk=MEDIUM
+[16:50:00] Vehicle 2 TTC=5.65 Risk=LOW
+[16:50:00] Vehicle 4 TTC=3.93 Risk=MEDIUM
+[16:50:00] RX ID=2 Dist=96
+[16:50:00] TX ID=1 Dist=73.47 Speed=38
+[16:50:01] RX ID=3 Dist=18
+[16:50:01] TX ID=1 Dist=77.68 Speed=9
+[16:50:01] Vehicle 3 TTC=1.38 Risk=HIGH
+[16:50:01] Vehicle 2 TTC=6.86 Risk=LOW
+[16:50:01] Vehicle 4 TTC=4.58 Risk=LOW
+[16:50:01] RX ID=4 Dist=46
+[16:50:01] TX ID=1 Dist=71.41 Speed=26
+[16:50:01] RX ID=4 Dist=41
+[16:50:01] TX ID=1 Dist=47.65 Speed=42
+[16:50:01] Vehicle 3 TTC=18.00 Risk=LOW
+[16:50:01] Vehicle 2 TTC=48.00 Risk=LOW
+[16:50:01] Vehicle 4 TTC=2.16 Risk=MEDIUM
+[16:50:01] RX ID=4 Dist=10
+[16:50:02] TX ID=1 Dist=44.99 Speed=19
+[16:50:02] RX ID=2 Dist=27
+[16:50:02] RX ID=2 Dist=10
+[16:50:02] Vehicle 3 TTC=18.00 Risk=LOW
+[16:50:02] TX ID=1 Dist=67.39 Speed=49
+[16:50:02] Vehicle 2 TTC=0.36 Risk=CRITICAL
+[16:50:02] Vehicle 4 TTC=10.00 Risk=LOW
+[16:50:02] RX ID=4 Dist=7
+[16:50:02] TX ID=1 Dist=62.04 Speed=27
+[16:50:02] Vehicle 3 TTC=2.25 Risk=MEDIUM
+[16:50:02] TX ID=1 Dist=83.62 Speed=45
+[16:50:03] RX ID=3 Dist=66
+[16:50:03] Vehicle 2 TTC=0.48 Risk=CRITICAL
+[16:50:03] Vehicle 4 TTC=2.33 Risk=MEDIUM
+[16:50:03] RX ID=2 Dist=21
+[16:50:03] TX ID=1 Dist=56.97 Speed=9
+[16:50:03] RX ID=4 Dist=27
+[16:50:03] Vehicle 3 TTC=13.20 Risk=LOW
+[16:50:03] RX ID=2 Dist=69
+[16:50:03] TX ID=1 Dist=81.78 Speed=39
+[16:50:03] Vehicle 2 TTC=1.05 Risk=HIGH
+[16:50:03] Vehicle 4 TTC=27.00 Risk=LOW
+[16:50:03] TX ID=1 Dist=71.07 Speed=49
+[16:50:04] RX ID=4 Dist=39
+[16:50:04] Vehicle 3 TTC=11.00 Risk=LOW
+[16:50:04] RX ID=2 Dist=34
+[16:50:04] Vehicle 2 TTC=4.06 Risk=LOW
+[16:50:04] TX ID=1 Dist=81.04 Speed=28
+[16:50:04] Vehicle 4 TTC=4.88 Risk=LOW
+[16:50:04] RX ID=2 Dist=56
+[16:50:04] RX ID=2 Dist=45
+[16:50:04] TX ID=1 Dist=83.43 Speed=20
+[16:50:04] Vehicle 3 TTC=7.33 Risk=LOW
+[16:50:04] Vehicle 2 TTC=5.00 Risk=LOW
+[16:50:04] RX ID=2 Dist=37
+[16:50:04] Vehicle 4 TTC=3.55 Risk=MEDIUM
+[16:50:04] TX ID=1 Dist=97.26 Speed=21
+[16:50:05] RX ID=3 Dist=22
+[16:50:05] TX ID=1 Dist=87.95 Speed=5
+[16:50:05] Vehicle 3 TTC=1.47 Risk=HIGH
+[16:50:05] Vehicle 2 TTC=2.85 Risk=MEDIUM
+[16:50:05] RX ID=2 Dist=86
+[16:50:05] Vehicle 4 TTC=inf Risk=LOW
+[16:50:05] TX ID=1 Dist=65.57 Speed=50
+[16:50:05] RX ID=3 Dist=39
+[16:50:05] TX ID=1 Dist=56.14 Speed=37
+[16:50:05] RX ID=4 Dist=28
+[16:50:05] Vehicle 3 TTC=9.75 Risk=LOW
+[16:50:06] Vehicle 2 TTC=inf Risk=LOW
+[16:50:06] Vehicle 4 TTC=5.60 Risk=LOW
+[16:50:06] RX ID=3 Dist=15
+[16:50:06] TX ID=1 Dist=52.09 Speed=35
+[16:50:06] RX ID=3 Dist=58
+[16:50:06] Vehicle 3 TTC=2.15 Risk=MEDIUM
+[16:50:06] TX ID=1 Dist=44.85 Speed=25
+[16:50:06] Vehicle 2 TTC=4.53 Risk=LOW
+[16:50:06] Vehicle 4 TTC=2.00 Risk=MEDIUM
+[16:50:06] TX ID=1 Dist=69.71 Speed=28
+[16:50:06] RX ID=3 Dist=92
+[16:50:07] Vehicle 3 TTC=11.50 Risk=LOW
+[16:50:07] RX ID=3 Dist=5
+[16:50:07] Vehicle 2 TTC=17.20 Risk=LOW
+[16:50:07] TX ID=1 Dist=55.03 Speed=35
+[16:50:07] Vehicle 4 TTC=inf Risk=LOW
+[16:50:07] TX ID=1 Dist=59.82 Speed=15
+[16:50:07] RX ID=4 Dist=39
+[16:50:07] Vehicle 3 TTC=0.24 Risk=CRITICAL
+[16:50:07] Vehicle 2 TTC=4.10 Risk=LOW
+[16:50:07] TX ID=1 Dist=68.29 Speed=33
+[16:50:07] Vehicle 4 TTC=1.22 Risk=HIGH
+[16:50:07] RX ID=3 Dist=49
+[16:50:07] TX ID=1 Dist=54.97 Speed=31
+[16:50:08] Vehicle 3 TTC=1.69 Risk=HIGH
+[16:50:08] RX ID=3 Dist=77
+[16:50:08] Vehicle 2 TTC=4.10 Risk=LOW
+[16:50:08] TX ID=1 Dist=52.98 Speed=32
+[16:50:08] Vehicle 4 TTC=1.22 Risk=HIGH
+[16:50:08] RX ID=4 Dist=50
+[16:50:08] TX ID=1 Dist=35.79 Speed=29
+[16:50:08] RX ID=3 Dist=100
+[16:50:08] Vehicle 3 TTC=50.00 Risk=LOW
+[16:50:08] RX ID=4 Dist=22
+[16:50:08] Vehicle 2 TTC=3.44 Risk=MEDIUM
+[16:50:08] Vehicle 4 TTC=8.33 Risk=LOW
+[16:50:08] TX ID=1 Dist=53.07 Speed=36
+[16:50:09] RX ID=2 Dist=46
+[16:50:09] TX ID=1 Dist=78.24 Speed=1
+[16:50:09] Vehicle 3 TTC=3.23 Risk=MEDIUM
+[16:50:09] RX ID=2 Dist=55
+[16:50:09] Vehicle 2 TTC=1.53 Risk=HIGH
+[16:50:09] RX ID=4 Dist=75
+[16:50:09] Vehicle 4 TTC=0.92 Risk=CRITICAL
+[16:50:09] TX ID=1 Dist=86.55 Speed=38
+[16:50:09] RX ID=4 Dist=32
+[16:50:09] RX ID=2 Dist=17
+[16:50:09] TX ID=1 Dist=85.53 Speed=40
+[16:50:09] Vehicle 3 TTC=3.03 Risk=MEDIUM
+[16:50:10] Vehicle 2 TTC=3.40 Risk=MEDIUM
+[16:50:10] Vehicle 4 TTC=1.14 Risk=HIGH
+[16:50:10] RX ID=3 Dist=63
+[16:50:10] TX ID=1 Dist=70.92 Speed=25
+[16:50:10] RX ID=3 Dist=7
+[16:50:10] TX ID=1 Dist=80.95 Speed=10
+[16:50:10] Vehicle 3 TTC=1.17 Risk=HIGH
+[16:50:10] RX ID=2 Dist=45
+[16:50:10] Vehicle 2 TTC=1.55 Risk=HIGH
+[16:50:10] Vehicle 4 TTC=2.67 Risk=MEDIUM
+[16:50:10] RX ID=3 Dist=94
+[16:50:10] TX ID=1 Dist=58.17 Speed=18
+[16:50:11] Vehicle 3 TTC=3.24 Risk=MEDIUM
+[16:50:11] RX ID=2 Dist=24
+[16:50:11] Vehicle 2 TTC=1.41 Risk=HIGH
+[16:50:11] TX ID=1 Dist=58.90 Speed=25
+[16:50:11] Vehicle 4 TTC=0.73 Risk=CRITICAL
+[16:50:11] RX ID=3 Dist=28
+[16:50:11] RX ID=4 Dist=90
+[16:50:11] TX ID=1 Dist=59.74 Speed=9
+[16:50:11] RX ID=3 Dist=19
+[16:50:11] Vehicle 3 TTC=19.00 Risk=LOW
+[16:50:11] TX ID=1 Dist=76.64 Speed=39
+[16:50:11] RX ID=3 Dist=74
+[16:50:11] Vehicle 4 TTC=6.00 Risk=LOW
+[16:50:12] RX ID=3 Dist=78
+[16:50:12] TX ID=1 Dist=78.79 Speed=4
+[16:50:12] Vehicle 3 TTC=5.57 Risk=LOW
+[16:50:12] TX ID=1 Dist=88.87 Speed=39
+[16:50:12] Vehicle 2 TTC=2.40 Risk=MEDIUM
+[16:50:12] Vehicle 4 TTC=inf Risk=LOW
+[16:50:12] RX ID=3 Dist=39
+[16:50:12] TX ID=1 Dist=64.52 Speed=29
+[16:50:12] RX ID=4 Dist=15
+[16:50:12] RX ID=3 Dist=25
+[16:50:12] Vehicle 3 TTC=1.14 Risk=HIGH
+[16:50:13] TX ID=1 Dist=59.11 Speed=5
+[16:50:13] Vehicle 2 TTC=1.26 Risk=HIGH
+[16:50:13] Vehicle 4 TTC=15.00 Risk=LOW
+[16:50:13] RX ID=4 Dist=32
+[16:50:13] TX ID=1 Dist=57.07 Speed=47
+[16:50:13] RX ID=3 Dist=81
+[16:50:13] Vehicle 3 TTC=5.06 Risk=LOW
+[16:50:13] TX ID=1 Dist=42.64 Speed=29
+[16:50:13] Vehicle 2 TTC=4.80 Risk=LOW
+[16:50:13] RX ID=4 Dist=92
+[16:50:13] Vehicle 4 TTC=0.91 Risk=CRITICAL
+[16:50:13] RX ID=4 Dist=35
+[16:50:13] TX ID=1 Dist=37.18 Speed=13
+[16:50:14] RX ID=3 Dist=57
+[16:50:14] Vehicle 3 TTC=3.56 Risk=MEDIUM
+[16:50:14] TX ID=1 Dist=49.91 Speed=32
+[16:50:14] RX ID=2 Dist=18
+[16:50:14] Vehicle 2 TTC=1.41 Risk=HIGH
+[16:50:14] Vehicle 4 TTC=0.92 Risk=CRITICAL
+[16:50:14] TX ID=1 Dist=75.95 Speed=49
+[16:50:14] RX ID=4 Dist=35
+[16:50:14] RX ID=2 Dist=36
+[16:50:14] Vehicle 3 TTC=2.28 Risk=MEDIUM
+[16:50:14] TX ID=1 Dist=55.57 Speed=37
+[16:50:14] Vehicle 2 TTC=0.69 Risk=CRITICAL
+[16:50:14] RX ID=4 Dist=67
+[16:50:14] Vehicle 4 TTC=11.67 Risk=LOW
+[16:50:15] TX ID=1 Dist=42.94 Speed=31
+[16:50:15] RX ID=4 Dist=42
+[16:50:15] Vehicle 3 TTC=1.90 Risk=HIGH
+[16:50:15] Vehicle 2 TTC=1.64 Risk=HIGH
+[16:50:15] TX ID=1 Dist=54.16 Speed=19
+[16:50:15] RX ID=3 Dist=94
+[16:50:15] Vehicle 4 TTC=14.00 Risk=LOW
+[16:50:15] RX ID=3 Dist=70
+[16:50:15] TX ID=1 Dist=48.90 Speed=8
+[16:50:15] RX ID=3 Dist=45
+[16:50:16] Vehicle 3 TTC=2.25 Risk=MEDIUM
+[16:50:16] TX ID=1 Dist=39.74 Speed=5
+[16:50:16] Vehicle 2 TTC=1.64 Risk=HIGH
+[16:50:16] RX ID=4 Dist=66
+[16:50:16] Vehicle 4 TTC=14.00 Risk=LOW
+[16:50:16] RX ID=4 Dist=97
+[16:50:16] TX ID=1 Dist=65.44 Speed=32
+[16:50:16] Vehicle 3 TTC=2.37 Risk=MEDIUM
+[16:50:16] RX ID=4 Dist=52
+[16:50:16] Vehicle 2 TTC=1.71 Risk=HIGH
+[16:50:16] TX ID=1 Dist=58.07 Speed=41
+[16:50:16] Vehicle 4 TTC=7.46 Risk=LOW
+[16:50:16] RX ID=2 Dist=26
+[16:50:17] TX ID=1 Dist=46.84 Speed=17
+[16:50:17] RX ID=2 Dist=85
+[16:50:17] Vehicle 3 TTC=1.96 Risk=HIGH
+[16:50:17] RX ID=2 Dist=41
+[16:50:17] TX ID=1 Dist=74.50 Speed=49
+[16:50:17] Vehicle 2 TTC=2.43 Risk=MEDIUM
+[16:50:17] Vehicle 4 TTC=2.36 Risk=MEDIUM
+[16:50:17] RX ID=2 Dist=40
+[16:50:17] TX ID=1 Dist=48.70 Speed=43
+[16:50:17] RX ID=2 Dist=53
+[16:50:17] Vehicle 3 TTC=2.14 Risk=MEDIUM
+[16:50:17] Vehicle 2 TTC=3.12 Risk=MEDIUM
+[16:50:17] TX ID=1 Dist=76.82 Speed=16
+[16:50:18] RX ID=4 Dist=91
+[16:50:18] Vehicle 4 TTC=2.36 Risk=MEDIUM
+[16:50:18] RX ID=4 Dist=50
+[16:50:18] TX ID=1 Dist=73.29 Speed=37
+[16:50:18] RX ID=4 Dist=41
+[16:50:18] Vehicle 3 TTC=3.46 Risk=MEDIUM
+[16:50:18] Vehicle 2 TTC=5.89 Risk=LOW
+[16:50:18] TX ID=1 Dist=87.98 Speed=26
+[16:50:18] RX ID=3 Dist=5
+[16:50:18] Vehicle 4 TTC=3.42 Risk=MEDIUM
+[16:50:18] RX ID=4 Dist=76
+[16:50:18] TX ID=1 Dist=65.99 Speed=9
+[16:50:18] RX ID=3 Dist=74
+[16:50:19] Vehicle 3 TTC=6.17 Risk=LOW
+[16:50:19] Vehicle 2 TTC=26.50 Risk=LOW
+[16:50:19] TX ID=1 Dist=76.79 Speed=1
+[16:50:19] Vehicle 4 TTC=6.33 Risk=LOW
+[16:50:19] RX ID=3 Dist=7
+[16:50:19] TX ID=1 Dist=90.47 Speed=2
+[16:50:19] RX ID=4 Dist=74
+[16:50:19] Vehicle 3 TTC=0.58 Risk=CRITICAL
+[16:50:19] Vehicle 2 TTC=6.62 Risk=LOW
+[16:50:19] RX ID=4 Dist=13
+[16:50:19] Vehicle 4 TTC=5.29 Risk=LOW
+[16:50:19] TX ID=1 Dist=91.48 Speed=32
+[16:50:19] RX ID=4 Dist=54
+[16:50:19] TX ID=1 Dist=94.89 Speed=12
+[16:50:20] Vehicle 3 TTC=2.33 Risk=MEDIUM
+[16:50:20] RX ID=2 Dist=29
+[16:50:20] Vehicle 2 TTC=3.12 Risk=MEDIUM
+[16:50:20] TX ID=1 Dist=95.73 Speed=41
+[16:50:20] RX ID=2 Dist=42
+[16:50:20] Vehicle 4 TTC=3.86 Risk=MEDIUM
+[16:50:20] RX ID=3 Dist=67
+[16:50:20] TX ID=1 Dist=99.04 Speed=13
+[16:50:20] Vehicle 3 TTC=3.35 Risk=MEDIUM
+[16:50:20] Vehicle 2 TTC=1.62 Risk=HIGH
+[16:50:20] RX ID=2 Dist=74
+[16:50:20] Vehicle 4 TTC=9.00 Risk=LOW
+[16:50:20] TX ID=1 Dist=98.22 Speed=20
+[16:50:21] RX ID=4 Dist=70
+[16:50:21] TX ID=1 Dist=96.53 Speed=32
+[16:50:21] RX ID=4 Dist=32
+[16:50:21] Vehicle 3 TTC=1.63 Risk=HIGH
+[16:50:21] RX ID=2 Dist=63
+[16:50:21] Vehicle 2 TTC=1.85 Risk=HIGH
+[16:50:21] Vehicle 4 TTC=1.45 Risk=HIGH
+[16:50:21] TX ID=1 Dist=103.52 Speed=41
+[16:50:21] RX ID=3 Dist=23
+[16:50:21] TX ID=1 Dist=97.31 Speed=47
+[16:50:21] Vehicle 3 TTC=1.53 Risk=HIGH
+[16:50:21] Vehicle 2 TTC=1.37 Risk=HIGH
+[16:50:22] RX ID=2 Dist=6
+[16:50:22] Vehicle 4 TTC=1.52 Risk=HIGH
+[16:50:22] TX ID=1 Dist=88.39 Speed=41
+[16:50:22] RX ID=3 Dist=93
+[16:50:22] RX ID=2 Dist=55
+[16:50:22] TX ID=1 Dist=81.03 Speed=1
+[16:50:22] Vehicle 3 TTC=4.89 Risk=LOW
+[16:50:22] Vehicle 2 TTC=1.31 Risk=HIGH
+[16:50:22] RX ID=3 Dist=54
+[16:50:22] Vehicle 4 TTC=1.52 Risk=HIGH
+[16:50:22] TX ID=1 Dist=71.42 Speed=34
+[16:50:22] RX ID=2 Dist=53
+[16:50:22] RX ID=3 Dist=78
+[16:50:23] Vehicle 3 TTC=4.88 Risk=LOW
+[16:50:23] TX ID=1 Dist=61.25 Speed=38
+[16:50:23] Vehicle 2 TTC=2.41 Risk=MEDIUM
+[16:50:23] Vehicle 4 TTC=32.00 Risk=LOW
+[16:50:23] RX ID=2 Dist=100
+[16:50:23] TX ID=1 Dist=83.95 Speed=20
+[16:50:23] Vehicle 3 TTC=9.75 Risk=LOW
+[16:50:23] RX ID=3 Dist=22
+[16:50:23] Vehicle 2 TTC=16.67 Risk=LOW
+[16:50:23] TX ID=1 Dist=58.77 Speed=38
+[16:50:23] Vehicle 4 TTC=4.57 Risk=LOW
+[16:50:23] RX ID=3 Dist=34
+[16:50:24] TX ID=1 Dist=82.06 Speed=17
+[16:50:23] RX ID=4 Dist=10
+[16:50:24] Vehicle 3 TTC=2.83 Risk=MEDIUM
+[16:50:24] Vehicle 2 TTC=5.26 Risk=LOW
+[16:50:24] TX ID=1 Dist=81.24 Speed=35
+[16:50:24] RX ID=4 Dist=78
+[16:50:24] Vehicle 4 TTC=0.34 Risk=CRITICAL
+[16:50:24] RX ID=3 Dist=39
+[16:50:24] TX ID=1 Dist=95.14 Speed=8
+[16:50:24] RX ID=4 Dist=90
+[16:50:24] Vehicle 3 TTC=13.00 Risk=LOW
+[16:50:24] Vehicle 2 TTC=50.00 Risk=LOW
+[16:50:24] Vehicle 4 TTC=4.29 Risk=LOW
+[16:50:24] TX ID=1 Dist=91.09 Speed=5
+[16:50:24] RX ID=2 Dist=78
+[16:50:25] RX ID=2 Dist=42
+[16:50:25] TX ID=1 Dist=74.65 Speed=28
+[16:50:25] RX ID=4 Dist=37
+[16:50:25] Vehicle 3 TTC=2.79 Risk=MEDIUM
+[16:50:25] Vehicle 2 TTC=21.00 Risk=LOW
+[16:50:25] TX ID=1 Dist=77.99 Speed=7
+[16:50:25] Vehicle 4 TTC=9.00 Risk=LOW
+[16:50:25] RX ID=4 Dist=82
+[16:50:25] TX ID=1 Dist=77.59 Speed=35
+[16:50:25] RX ID=2 Dist=57
+[16:50:25] Vehicle 3 TTC=5.57 Risk=LOW
+[16:50:26] RX ID=2 Dist=54
+[16:50:26] Vehicle 2 TTC=3.17 Risk=MEDIUM
+[16:50:26] TX ID=1 Dist=85.36 Speed=50
+[16:50:26] Vehicle 4 TTC=82.00 Risk=LOW
+[16:50:26] RX ID=4 Dist=19
+[16:50:26] TX ID=1 Dist=95.21 Speed=29
+[16:50:26] RX ID=4 Dist=12
+[16:50:26] Vehicle 3 TTC=1.50 Risk=HIGH
+[16:50:26] Vehicle 2 TTC=2.45 Risk=MEDIUM
+[16:50:26] Vehicle 4 TTC=2.00 Risk=MEDIUM
+[16:50:26] TX ID=1 Dist=68.33 Speed=28
+[16:50:26] RX ID=2 Dist=68
+[16:50:26] RX ID=4 Dist=16
+[16:50:27] TX ID=1 Dist=81.40 Speed=40
+[16:50:27] Vehicle 3 TTC=3.55 Risk=MEDIUM
+[16:50:27] RX ID=2 Dist=65
+[16:50:27] Vehicle 2 TTC=3.58 Risk=MEDIUM
+[16:50:27] Vehicle 4 TTC=8.00 Risk=LOW
+[16:50:27] TX ID=1 Dist=83.24 Speed=36
+[16:50:27] RX ID=3 Dist=81
+[16:50:27] TX ID=1 Dist=72.74 Speed=41
+[16:50:27] Vehicle 3 TTC=8.10 Risk=LOW
+[16:50:27] Vehicle 2 TTC=4.33 Risk=LOW
+[16:50:27] RX ID=3 Dist=44
+[16:50:27] Vehicle 4 TTC=2.00 Risk=MEDIUM
+[16:50:28] TX ID=1 Dist=64.05 Speed=1
+[16:50:28] RX ID=4 Dist=9
+[16:50:28] TX ID=1 Dist=72.83 Speed=29
+[16:50:28] Vehicle 3 TTC=2.75 Risk=MEDIUM
+[16:50:28] RX ID=4 Dist=74
+[16:50:28] Vehicle 2 TTC=6.50 Risk=LOW
+[16:50:28] Vehicle 4 TTC=1.80 Risk=HIGH
+[16:50:28] TX ID=1 Dist=50.50 Speed=0
+[16:50:28] RX ID=4 Dist=18
+[16:50:28] TX ID=1 Dist=48.70 Speed=32
+[16:50:29] Vehicle 3 TTC=1.63 Risk=HIGH
+[16:50:29] RX ID=2 Dist=90
+[16:50:29] Vehicle 2 TTC=3.10 Risk=MEDIUM
+[16:50:29] Vehicle 4 TTC=0.47 Risk=CRITICAL
+[16:50:29] TX ID=1 Dist=74.42 Speed=36
+[16:50:29] RX ID=4 Dist=80
+[16:50:29] RX ID=3 Dist=65
+[16:50:29] TX ID=1 Dist=65.85 Speed=34
+[16:50:29] Vehicle 3 TTC=13.00 Risk=LOW
+[16:50:29] RX ID=3 Dist=6
+[16:50:29] Vehicle 2 TTC=2.31 Risk=MEDIUM
+[16:50:29] Vehicle 4 TTC=20.00 Risk=LOW
+[16:50:29] RX ID=3 Dist=58
+[16:50:29] TX ID=1 Dist=59.51 Speed=12
+[16:50:30] RX ID=4 Dist=22
+[16:50:30] Vehicle 3 TTC=3.41 Risk=MEDIUM
+[16:50:30] RX ID=2 Dist=72
+[16:50:30] Vehicle 2 TTC=inf Risk=LOW
+[16:50:30] TX ID=1 Dist=82.11 Speed=30
+[16:50:30] Vehicle 4 TTC=1.22 Risk=HIGH
+[16:50:30] RX ID=2 Dist=13
+[16:50:30] TX ID=1 Dist=85.26 Speed=28
+[16:50:30] RX ID=3 Dist=98
+[16:50:30] Vehicle 3 TTC=10.89 Risk=LOW
+[16:50:30] RX ID=3 Dist=81
+[16:50:30] TX ID=1 Dist=96.76 Speed=9
+[16:50:30] Vehicle 2 TTC=0.72 Risk=CRITICAL
+[16:50:30] Vehicle 4 TTC=1.29 Risk=HIGH
+[16:50:31] RX ID=3 Dist=87
+[16:50:31] TX ID=1 Dist=70.45 Speed=46
+[16:50:31] RX ID=3 Dist=52
+[16:50:31] Vehicle 3 TTC=13.00 Risk=LOW
+[16:50:31] RX ID=3 Dist=55
+[16:50:31] TX ID=1 Dist=85.47 Speed=3
+[16:50:31] Vehicle 2 TTC=1.62 Risk=HIGH
+[16:50:31] Vehicle 4 TTC=2.44 Risk=MEDIUM
+[16:50:31] RX ID=3 Dist=62
+[16:50:31] TX ID=1 Dist=65.28 Speed=47
+[16:50:31] RX ID=3 Dist=100
+[16:50:31] Vehicle 3 TTC=10.00 Risk=LOW
+[16:50:32] TX ID=1 Dist=51.97 Speed=44
+[16:50:32] Vehicle 2 TTC=1.00 Risk=HIGH
+[16:50:32] Vehicle 4 TTC=1.83 Risk=HIGH
+[16:50:32] RX ID=3 Dist=59
+[16:50:32] TX ID=1 Dist=79.18 Speed=18
+[16:50:32] RX ID=4 Dist=74
+[16:50:32] Vehicle 3 TTC=2.57 Risk=MEDIUM
+[16:50:32] TX ID=1 Dist=83.11 Speed=11
+[16:50:32] Vehicle 2 TTC=0.65 Risk=CRITICAL
+[16:50:32] Vehicle 4 TTC=18.50 Risk=LOW
+[16:50:32] RX ID=4 Dist=45
+[16:50:32] RX ID=3 Dist=44
+[16:50:32] TX ID=1 Dist=58.67 Speed=24
+[16:50:33] Vehicle 3 TTC=4.89 Risk=LOW
+[16:50:33] RX ID=2 Dist=68
+[16:50:33] Vehicle 2 TTC=2.17 Risk=MEDIUM
+[16:50:33] TX ID=1 Dist=73.60 Speed=43
+[16:50:33] Vehicle 4 TTC=45.00 Risk=LOW
+[16:50:33] RX ID=4 Dist=86
+[16:50:33] RX ID=2 Dist=22
+[16:50:33] TX ID=1 Dist=59.36 Speed=11
+[16:50:33] RX ID=4 Dist=16
+[16:50:33] Vehicle 3 TTC=4.00 Risk=LOW
+[16:50:33] Vehicle 2 TTC=1.16 Risk=HIGH
+[16:50:33] Vehicle 4 TTC=0.70 Risk=CRITICAL
+[16:50:33] TX ID=1 Dist=77.62 Speed=2
+[16:50:34] RX ID=4 Dist=74
+[16:50:34] RX ID=2 Dist=42
+[16:50:34] TX ID=1 Dist=64.17 Speed=26
+[16:50:34] Vehicle 3 TTC=1.42 Risk=HIGH
+[16:50:34] Vehicle 2 TTC=0.98 Risk=CRITICAL
+[16:50:34] RX ID=3 Dist=18
+[16:50:34] Vehicle 4 TTC=6.17 Risk=LOW
+[16:50:34] RX ID=2 Dist=40
+0 Speed=19
+[16:50:34] RX ID=2 Dist=8
+[16:50:34] Vehicle 3 TTC=1.64 Risk=HIGH
+[16:50:34] TX ID=1 Dist=42.14 Speed=35
+[16:50:34] Vehicle 2 TTC=0.30 Risk=CRITICAL
+[16:50:34] RX ID=4 Dist=27
+[16:50:35] Vehicle 4 TTC=10.57 Risk=LOW
+[16:50:35] RX ID=2 Dist=80
+[16:50:35] TX ID=1 Dist=71.28 Speed=9
+[16:50:35] Vehicle 3 TTC=1.38 Risk=HIGH
+[16:50:35] TX ID=1 Dist=81.17 Speed=6
+[16:50:35] Vehicle 2 TTC=10.00 Risk=LOW
+[16:50:35] RX ID=4 Dist=59
+[16:50:35] Vehicle 4 TTC=1.12 Risk=HIGH
+[16:50:35] RX ID=4 Dist=37
+[16:50:35] TX ID=1 Dist=78.30 Speed=8
+[16:50:35] RX ID=3 Dist=100
+[16:50:35] Vehicle 3 TTC=0.75 Risk=CRITICAL
+[16:50:36] Vehicle 2 TTC=4.21 Risk=LOW
+[16:50:36] Vehicle 4 TTC=6.17 Risk=LOW
+[16:50:36] TX ID=1 Dist=90.98 Speed=28
+[16:50:36] RX ID=2 Dist=7
+[16:50:36] RX ID=4 Dist=90
+19 Speed=35
+[16:50:36] Vehicle 3 TTC=inf Risk=LOW
+[16:50:36] Vehicle 2 TTC=1.75 Risk=HIGH
+[16:50:36] Vehicle 4 TTC=45.00 Risk=LOW
+[16:50:36] RX ID=3 Dist=15
+[16:50:36] TX ID=1 Dist=88.11 Speed=7
+[16:50:36] RX ID=4 Dist=8
+[16:50:36] Vehicle 3 TTC=0.45 Risk=CRITICAL
+[16:50:37] TX ID=1 Dist=85.67 Speed=11
+[16:50:37] Vehicle 2 TTC=7.00 Risk=LOW
+[16:50:37] RX ID=3 Dist=97
+[16:50:37] Vehicle 4 TTC=0.25 Risk=CRITICAL
+[16:50:37] RX ID=3 Dist=71
+[16:50:37] TX ID=1 Dist=77.00 Speed=34
+[16:50:37] RX ID=2 Dist=77
+[16:50:37] Vehicle 3 TTC=2.37 Risk=MEDIUM
+[16:50:37] TX ID=1 Dist=84.60 Speed=9
+[16:50:37] Vehicle 2 TTC=4.05 Risk=LOW
+[16:50:37] RX ID=3 Dist=100
+[16:50:37] Vehicle 4 TTC=8.00 Risk=LOW
+[16:50:37] TX ID=1 Dist=62.76 Speed=16
+[16:50:37] RX ID=2 Dist=78
+[16:59:36] TX 1 16.0 33
+[16:59:36] TX 1 33.6 16
+[16:59:36] TX 1 61.8 22
+[16:59:36] TX 1 67.9 0
+[16:59:37] TX 1 63.5 6
+[16:59:37] TX 1 69.3 4
+[16:59:37] TX 1 57.2 27
+[16:59:37] TX 1 54.3 15
+[16:59:37] TX 1 68.2 29
+[16:59:38] TX 1 71.7 50
+[16:59:38] TX 1 74.6 34
+[16:59:38] TX 1 48.8 10
+[16:59:38] TX 1 40.9 22
+[16:59:38] TX 1 49.3 43
+[16:59:39] TX 1 43.2 21
+[16:59:39] TX 1 41.1 41
+[16:59:39] TX 1 46.7 34
+[16:59:39] TX 1 49.6 13
+[16:59:39] TX 1 41.8 23
+[16:59:40] TX 1 57.1 35
+[16:59:40] TX 1 48.2 39
+[16:59:40] TX 1 50.5 14
+[16:59:40] TX 1 59.5 49
+[16:59:40] TX 1 47.7 22
+[16:59:41] TX 1 35.8 22
+[16:59:41] TX 1 41.5 14
+[16:59:41] TX 1 59.3 36
+[16:59:41] TX 1 70.4 22
+[16:59:41] TX 1 54.2 1
+[16:59:42] TX 1 59.3 7
+[16:59:42] TX 1 46.0 41
+[16:59:42] TX 1 45.2 34
+[16:59:42] TX 1 53.9 36
+[16:59:42] TX 1 75.2 22
+[16:59:43] TX 1 85.5 9
+[16:59:43] TX 1 85.7 13
+[16:59:43] TX 1 70.6 45
+[16:59:43] TX 1 84.4 0
+[16:59:43] TX 1 78.6 11
+[16:59:44] TX 1 72.4 44
+[16:59:44] TX 1 59.4 49
+[16:59:44] TX 1 56.5 28
+[16:59:44] TX 1 80.7 17
+[16:59:44] TX 1 56.0 28
+[16:59:45] TX 1 56.0 42
+[16:59:45] TX 1 65.6 14
+[16:59:45] TX 1 83.0 12
+[16:59:45] TX 1 74.6 2
+[16:59:46] TX 1 78.7 42
+[16:59:46] TX 1 94.0 10
+[16:59:46] TX 1 86.4 24
+[16:59:46] TX 1 80.3 16
+[16:59:46] TX 1 84.2 12
