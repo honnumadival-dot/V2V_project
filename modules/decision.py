@@ -1,15 +1,16 @@
-from config import SAFE_TTC
+def calculate_ttc(distance, my_speed, other_speed):
+    relative_speed = my_speed - other_speed
 
-def calculate_ttc(distance, rel_speed):
-    if rel_speed <= 0:
-        return float('inf')
-    return distance / rel_speed
+    if relative_speed <= 0:
+        return float('inf')  # no collision
 
-def risk_score(ttc):
-    if ttc < 1:
+    return distance / relative_speed
+
+
+def risk_level(distance, ttc):
+    if distance < 10 or ttc < 2:
         return "CRITICAL"
-    elif ttc < SAFE_TTC:
-        return "HIGH"
-    elif ttc < SAFE_TTC * 2:
-        return "MEDIUM"
-    return "LOW"
+    elif distance < 30 or ttc < 5:
+        return "WARNING"
+    else:
+        return "SAFE"
