@@ -1,8 +1,7 @@
 import time
 import threading
 from config import VEHICLE_ID, SEND_INTERVAL
-import communication as comm
-
+from modules import communication as comm
 print(f"🚗 Vehicle {VEHICLE_ID} STARTED")
 
 def sender():
