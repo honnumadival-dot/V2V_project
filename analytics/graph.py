@@ -1,25 +1,23 @@
 import matplotlib.pyplot as plt
+import random
 
-history = {}
+x_data = []
+y_data = []
 
-def update_graph(vid, distance):
-    if vid not in history:
-        history[vid] = []
+plt.ion()
 
-    history[vid].append(distance)
+def show_graph(distance):
 
-    if len(history[vid]) > 20:
-        history[vid].pop(0)
+    x_data.append(len(x_data))
+    y_data.append(distance)
 
-def show_graph():
     plt.clf()
 
-    for vid, values in history.items():
-        plt.plot(values, label=f"Vehicle {vid}")
+    plt.title("Vehicle Distance Analytics")
 
-    plt.legend()
     plt.xlabel("Time")
     plt.ylabel("Distance")
-    plt.title("V2V Distance Trend")
+
+    plt.plot(x_data, y_data)
 
     plt.pause(0.01)

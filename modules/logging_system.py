@@ -2,19 +2,24 @@ import csv
 import os
 import time
 
-file_exists = os.path.isfile("data/log.csv")
+LOG_FILE = "data/log.csv"
 
-def log_event(data):
-    with open("data/log.csv", "a", newline='') as file:
+def log_event(message):
+
+    file_exists = os.path.isfile(LOG_FILE)
+
+    with open(LOG_FILE, "a", newline="") as file:
+
         writer = csv.writer(file)
 
         if not file_exists:
-            writer.writerow(["time", "vehicle", "distance", "ttc", "risk"])
+
+            writer.writerow([
+                "Time",
+                "Message"
+            ])
 
         writer.writerow([
             time.strftime("%H:%M:%S"),
-            data["id"],
-            data["distance"],
-            data["ttc"],
-            data["risk"]
+            message
         ])

@@ -1,23 +1,19 @@
-def predict_risk_score(distance, ttc):
-    score = 0
+def predict_risk(history):
 
-    if distance < 30:
-        score += 40
-    if distance < 10:
-        score += 40
+    if len(history) < 3:
+        return "NORMAL"
 
-    if ttc < 5:
-        score += 30
-    if ttc < 2:
-        score += 30
+    decreasing = 0
 
-    return min(score, 100)
+    for i in range(len(history)-1):
 
+        if history[i+1] < history[i]:
+            decreasing += 1
 
-def classify(score):
-    if score > 80:
-        return "CRITICAL"
-    elif score > 50:
-        return "WARNING"
-    else:
-        return "SAFE"
+    if decreasing >= 3:
+        return "HIGH COLLISION CHANCE"
+
+    elif decreasing >= 1:
+        return "APPROACHING"
+
+    return "STABLE"
